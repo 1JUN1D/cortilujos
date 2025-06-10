@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onda Serena Cortina Barranquilla, Colombia | CortiLujos</title>
+    <meta name="description" content="Servicio profesional de cortinas Onda Serena en Barranquilla. Sistema innovador con riel de aluminio y cordel especial para máxima elegancia.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:'Arial',sans-serif; line-height:1.6; color:#333; }
+        /* Header */
+        .header { background:#fff; box-shadow:0 2px 10px rgba(0,0,0,0.1); position:sticky; top:0; z-index:1000; }
+        .header-content { max-width:1200px; margin:0 auto; padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center; }
+        .logo { font-size:2rem; font-weight:bold; color:#7E1C11; text-decoration:none; }
+        .header-contact { display:flex; gap:2rem; align-items:center; }
+        .contact-item { display:flex; align-items:center; gap:0.5rem; font-size:0.9rem; }
+        .contact-item i { color:#7E1C11; }
+        /* Breadcrumb */
+        .breadcrumb { background:#f8f9fa; padding:1rem 0; }
+        .breadcrumb-content { max-width:1200px; margin:0 auto; padding:0 2rem; }
+        .breadcrumb a { color:#7E1C11; text-decoration:none; margin-right:0.5rem; }
+        .breadcrumb a:hover { text-decoration:underline; }
+        /* Hero */
+        .service-hero { background:linear-gradient(135deg,#7E1C11,#8B322A); color:white; padding:4rem 2rem; text-align:center; }
+        .service-hero h1 { font-size:3rem; margin-bottom:1rem; font-weight:bold; }
+        .service-hero p  { font-size:1.2rem; max-width:800px; margin:0 auto; }
+        /* Main content */
+        .main-content { max-width:800px; margin:0 auto; padding:3rem 2rem; }
+        .content-section { margin-bottom:3rem; }
+        .content-section h2 { font-size:2.2rem; color:#7E1C11; margin-bottom:1.5rem; }
+        .content-section p  { font-size:1.1rem; line-height:1.8; margin-bottom:1rem; color:#555; }
+        /* Gallery vertical */
+        .gallery-carousel-container {
+            position:relative;
+            width:300px;
+            height:500px;
+            margin:2rem auto;
+            overflow:hidden;
+            border-radius:10px;
+            background:#f0f0f0;
+        }
+        .gallery-carousel {
+            display:flex;
+            transition:transform 0.5s ease;
+            height:100%;
+        }
+        .gallery-carousel-item {
+            min-width:100%;
+            height:100%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+
+        .gallery-carousel-item img {
+        object-fit: contain;
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        }
+
+        .header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #7E1C11;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #7E1C11;
+        }
+
+        .nav-link i {
+            font-size: 0.8rem;
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #8B322A;
+            min-width: 250px;
+            border-radius: 8px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .nav-item:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-item {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 1.2rem;
+            transition: background 0.3s ease;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .dropdown-item:last-child {
+            border-bottom: none;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .dropdown-item:first-child {
+            border-radius: 8px 8px 0 0;
+        }
+
+        .dropdown-item:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .header-contact {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            gap: 0.3rem;
+        }
+
+        .contact-item {
+            display: end;
+            align-items: end;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .contact-item i {
+            color: #7E1C11;
+        }
+
+        .gallery-controls {
+            position:absolute;
+            top:50%;
+            transform:translateY(-50%);
+            background:rgba(126,28,17,0.8);
+            color:white;
+            border:none;
+            width:40px;
+            height:40px;
+            border-radius:50%;
+            cursor:pointer;
+            font-size:1.2rem;
+            z-index:10;
+            transition:all 0.3s ease;
+        }
+        .gallery-controls:hover {
+            background:#7E1C11;
+            transform:translateY(-50%) scale(1.1);
+        }
+        .gallery-prev { left:10px; }
+        .gallery-next { right:10px; }
+        .gallery-indicators {
+            position:absolute;
+            bottom:15px;
+            left:50%;
+            transform:translateX(-50%);
+            display:flex;
+            gap:8px;
+            z-index:10;
+        }
+        .gallery-dot {
+            width:10px; height:10px;
+            border-radius:50%;
+            background:rgba(255,255,255,0.5);
+            cursor:pointer;
+            transition:all 0.3s ease;
+        }
+        .gallery-dot.active {
+            background:white;
+            transform:scale(1.2);
+        }
+        .gallery-photo-count {
+            text-align:center;
+            margin-top:1rem;
+            font-size:1rem;
+            color:#666;
+            font-weight:500;
+        }
+        .logo img {
+        max-height: 80px;
+        width: auto;
+        display: block;
+        margin: 0;
+        }
+        
+        .cta-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem 2rem;
+        background: linear-gradient(135deg, #7E1C11, #8B322A);
+        color: white;
+        margin: 3rem 0;
+        }
+
+        .cta-section h3 {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        }
+
+        .cta-button {
+        background: #FFD700;
+        color: #7E1C11;
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        cursor: pointer;
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+        }
+        .cta-button:hover {
+            background:#FFC107;
+            transform:translateY(-2px);
+        }
+        
+        .footer {
+            background:#7E1C11;
+            color:white;
+            padding:2rem;
+            text-align:center;
+        }
+        .footer-links {
+            display:flex;
+            justify-content:center;
+            gap:2rem;
+            flex-wrap:wrap;
+            margin-bottom:1rem;
+        }
+        .footer-links h4 { cursor:pointer; transition:color 0.3s; }
+        .footer-links h4:hover { color:#FFD700; }
+        .whatsapp-float {
+            position:fixed;
+            bottom:20px;
+            right:20px;
+            background:#25D366;
+            color:white;
+            width:60px;
+            height:60px;
+            border-radius:50%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-size:1.8rem;
+            text-decoration:none;
+            box-shadow:0 4px 20px rgba(37,211,102,0.4);
+            transition:transform 0.3s;
+            z-index:1000;
+        }
+        .whatsapp-float:hover { transform:scale(1.1); }
+        
+        /* Technical specification box */
+        .tech-spec-box {
+            background: linear-gradient(135deg, #e8f4fd, #d1ecf1);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #7E1C11;
+            position: relative;
+        }
+        .tech-spec-box::before {
+            content: "⚙️";
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background: white;
+            padding: 0.5rem;
+            border-radius: 50%;
+            font-size: 1.5rem;
+        }
+        .tech-spec-box h3 {
+            color: #7E1C11;
+            margin-bottom: 1rem;
+            margin-left: 1rem;
+        }
+        .tech-spec-box .measurement {
+            background: #7E1C11;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+        
+        /* Highlight box */
+        .custom-highlight {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 4px solid #7E1C11;
+        }
+        .custom-highlight h3 {
+            color: #7E1C11;
+            margin-bottom: 1rem;
+        }
+        
+        @media (max-width:768px) {
+            .header-content  { flex-direction:column; gap:1rem; }
+            .header-contact  { flex-direction:column; gap:0.5rem; }
+            .service-hero h1 { font-size:2rem; }
+            .cta-button {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="/cortilujos-main/index.html" class="logo">
+                <img src="/cortilujos-main/logo.jpg" alt="CortiLujos Logo">
+            </a>
+            <div class="header-contact">
+                <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>Carrera 44 #70-88, Barranquilla</span></div>
+                <div class="contact-item"><i class="fas fa-phone"></i><span>+57 300 3903535</span></div>
+                <div class="contact-item"><i class="fab fa-instagram"></i><span>@corti_lujo</span></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="breadcrumb-content">
+            <a href="/cortilujos-main/index.html">Inicio</a> &gt; <span>Onda Serena Cortina</span>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <h1>Onda Serena Cortina Barranquilla, Colombia</h1>
+        <p>Sistema innovador de cortinas con riel de aluminio y cordel especial. La solución perfecta para espacios elegantes y funcionales</p>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Características de nuestras Cortinas Onda Serena</h2>
+            <p>El sistema de nuestras Onda Serena consiste en un riel de aluminio que aloja en su interior un cordel especial que lleva una serie de carros, los cuales se repiten a lo largo del cordel separados por una distancia fija, que varía entre 4.8cm y 6cm.</p>
+
+            <!-- Technical Specification Box -->
+            <div class="tech-spec-box">
+                <h3>Especificaciones Técnicas del Sistema</h3>
+                <p><strong>Riel de aluminio:</strong> Estructura principal que aloja el mecanismo</p>
+                <p><strong>Cordel especial:</strong> Sistema de tracción de alta resistencia</p>
+                <p><strong>Carros espaciados:</strong> Distribución uniforme para movimiento suave</p>
+                <div class="measurement">Distancia entre carros: 4.8cm - 6cm</div>
+            </div>
+
+            <!-- Gallery Carousel -->
+            <div class="gallery-carousel-container">
+                <div class="gallery-carousel" id="galleryCarousel"></div>
+                <button class="gallery-controls gallery-prev" onclick="changeGallerySlide(-1)"><i class="fas fa-chevron-left"></i></button>
+                <button class="gallery-controls gallery-next" onclick="changeGallerySlide(1)"><i class="fas fa-chevron-right"></i></button>
+                <div class="gallery-indicators" id="galleryIndicators"></div>
+            </div>
+            <div class="gallery-photo-count" id="photoCount"></div>
+        </section>
+
+        <section class="content-section">
+            <div class="custom-highlight">
+                <h3>Fabricación Personalizada</h3>
+                <p><strong>Realizamos las cortinas manuales o motorizadas a tu medida.</strong></p>
+                <p>Cada sistema Onda Serena se fabrica según las dimensiones exactas de tu espacio, garantizando un funcionamiento perfecto y una estética impecable.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Ventajas del Sistema Onda Serena</h2>
+            <ul style="padding-left:1.5rem; margin:1rem 0; color:#555;">
+                <li><strong>Movimiento suave:</strong> El sistema de carros garantiza operación sin esfuerzo</li>
+                <li><strong>Durabilidad superior:</strong> Riel de aluminio de alta calidad</li>
+                <li><strong>Distribución uniforme:</strong> Espaciado preciso entre carros</li>
+                <li><strong>Versatilidad:</strong> Disponible en versión manual o motorizada</li>
+                <li><strong>Estética moderna:</strong> Líneas limpias y elegantes</li>
+                <li><strong>Bajo mantenimiento:</strong> Sistema cerrado que protege el mecanismo</li>
+                <li><strong>Instalación profesional:</strong> Montaje especializado garantizado</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Aplicaciones Ideales</h2>
+            <p>Las cortinas Onda Serena son perfectas para:</p>
+            <ul style="padding-left:1.5rem; margin:1rem 0; color:#555;">
+                <li><strong>Salas principales:</strong> Elegancia y funcionalidad en espacios centrales</li>
+                <li><strong>Comedores formales:</strong> Sofisticación en áreas de entretenimiento</li>
+                <li><strong>Oficinas ejecutivas:</strong> Ambiente profesional y moderno</li>
+                <li><strong>Habitaciones principales:</strong> Confort y privacidad de lujo</li>
+                <li><strong>Espacios corporativos:</strong> Solución elegante para empresas</li>
+                <li><strong>Hoteles y restaurantes:</strong> Ambiente refinado para huéspedes</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Tipos de Telas Disponibles</h2>
+            <p>Trabajamos con una amplia variedad de telas para el sistema Onda Serena:</p>
+            <ul style="padding-left:1.5rem; margin:1rem 0; color:#555;">
+                <li>Telas traslúcidas para filtrado suave de luz</li>
+                <li>Telas opacas para mayor privacidad</li>
+                <li>Materiales texturizados para efectos decorativos</li>
+                <li>Telas ignífugas para seguridad adicional</li>
+                <li>Colores sólidos y patrones exclusivos</li>
+                <li>Materiales de fácil limpieza y mantenimiento</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Sistemas de Operación</h2>
+            <ul style="padding-left:1.5rem; margin:1rem 0; color:#555;">
+                <li><strong>Sistema manual:</strong> Operación tradicional con cordel de tracción</li>
+                <li><strong>Sistema motorizado:</strong> Control remoto para máxima comodidad</li>
+                <li><strong>Automatización:</strong> Integración con sistemas domóticos</li>
+                <li><strong>Controles de pared:</strong> Interruptores dedicados para facilidad de uso</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>¿Por qué elegir CortiLujos para Onda Serena?</h2>
+            <p>En CortiLujos somos especialistas en el sistema Onda Serena. Contamos con la experiencia técnica necesaria para instalar correctamente este sistema sofisticado, garantizando un funcionamiento perfecto y una durabilidad excepcional.</p>
+            <p>Nuestro proceso incluye medición de precisión, selección de materiales apropiados, fabricación personalizada e instalación profesional. Cada proyecto cuenta con garantía extendida y servicio técnico especializado.</p>
+        </section>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h3>¿Listo para transformar tu espacio?</h3>
+        <a href="https://wa.me/573003903535" class="cta-button">Solicitar Presupuesto Gratis</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 CortiLujos. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/573003903535" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+
+    <script>
+        const productData = { name:"Onda Serena", folder:"Onda Serena", photos:5 };
+        let currentGallerySlide = 0;
+        function generateGalleryCarousel() {
+            const carousel = document.getElementById('galleryCarousel');
+            const indicators = document.getElementById('galleryIndicators');
+            const photoCount = document.getElementById('photoCount');
+            let items='', dots='';
+            for(let i=1;i<=productData.photos;i++){
+                items += `<div class="gallery-carousel-item"><img src="/cortilujos-main/${productData.folder}/${i}.jpeg" alt="${productData.name} ${i}" onerror="this.onerror=null;this.src='/cortilujos-main/${productData.folder}/${i}.jpg';"></div>`;
+                dots  += `<div class="gallery-dot${i===1?' active':''}" onclick="goToGallerySlide(${i-1})"></div>`;
+            }
+            carousel.innerHTML=items;
+            indicators.innerHTML=dots;
+            photoCount.innerText=`${productData.photos} fotos disponibles`;
+        }
+        function updateGalleryCarousel() {
+            const carousel= document.getElementById('galleryCarousel');
+            const dots    = document.querySelectorAll('.gallery-dot');
+            carousel.style.transform=`translateX(${-currentGallerySlide*100}%)`;
+            dots.forEach((d,i)=>d.classList.toggle('active',i===currentGallerySlide));
+        }
+        function changeGallerySlide(dir){ currentGallerySlide=(currentGallerySlide+dir+productData.photos)%productData.photos; updateGalleryCarousel(); }
+        function goToGallerySlide(i){ currentGallerySlide=i; updateGalleryCarousel(); }
+        document.addEventListener('DOMContentLoaded',()=>{ generateGalleryCarousel(); });
+    </script>
+</body>
+</html>

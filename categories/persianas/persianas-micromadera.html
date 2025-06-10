@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persianas Macromadera Barranquilla, Colombia | CortiLujos</title>
+    <meta name="description" content="Servicio profesional de Persianas Macromadera en Barranquilla. Material de alta calidad, liviano pero muy resistente, ideal para crear ambientes cálidos y naturales.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:'Arial',sans-serif; line-height:1.6; color:#333; }
+        /* Header */
+        .header { background:#fff; box-shadow:0 2px 10px rgba(0,0,0,0.1); position:sticky; top:0; z-index:1000; }
+        .header-content { max-width:1200px; margin:0 auto; padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center; }
+        .logo { font-size:2rem; font-weight:bold; color:#7E1C11; text-decoration:none; }
+        .header-contact { display:flex; gap:2rem; align-items:center; }
+        .contact-item { display:flex; align-items:center; gap:0.5rem; font-size:0.9rem; }
+        .contact-item i { color:#7E1C11; }
+        /* Breadcrumb */
+        .breadcrumb { background:#f8f9fa; padding:1rem 0; }
+        .breadcrumb-content { max-width:1200px; margin:0 auto; padding:0 2rem; }
+        .breadcrumb a { color:#7E1C11; text-decoration:none; margin-right:0.5rem; }
+        .breadcrumb a:hover { text-decoration:underline; }
+        /* Hero */
+        .service-hero { background:linear-gradient(135deg,#7E1C11,#8B322A); color:white; padding:4rem 2rem; text-align:center; }
+        .service-hero h1 { font-size:3rem; margin-bottom:1rem; font-weight:bold; }
+        .service-hero p  { font-size:1.2rem; max-width:800px; margin:0 auto; }
+        /* Main content */
+        .main-content { max-width:800px; margin:0 auto; padding:3rem 2rem; }
+        .content-section { margin-bottom:3rem; }
+        .content-section h2 { font-size:2.2rem; color:#7E1C11; margin-bottom:1.5rem; }
+        .content-section p  { font-size:1.1rem; line-height:1.8; margin-bottom:1rem; color:#555; }
+        /* Gallery vertical */
+        .gallery-carousel-container {
+            position:relative;
+            width:300px;
+            height:500px;
+            margin:2rem auto;
+            overflow:hidden;
+            border-radius:10px;
+            background:#f0f0f0;
+        }
+        .gallery-carousel {
+            display:flex;
+            transition:transform 0.5s ease;
+            height:100%;
+        }
+        .gallery-carousel-item {
+            min-width:100%;
+            height:100%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+
+        .gallery-carousel-item img {
+        object-fit: contain;
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        }
+
+        .header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #7E1C11;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #7E1C11;
+        }
+
+        .nav-link i {
+            font-size: 0.8rem;
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #8B322A;
+            min-width: 250px;
+            border-radius: 8px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .nav-item:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-item {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 1.2rem;
+            transition: background 0.3s ease;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .dropdown-item:last-child {
+            border-bottom: none;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .dropdown-item:first-child {
+            border-radius: 8px 8px 0 0;
+        }
+
+        .dropdown-item:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .header-contact {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            gap: 0.3rem;
+        }
+
+        .contact-item {
+            display: end;
+            align-items: end;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .contact-item i {
+            color: #7E1C11;
+        }
+
+        .gallery-controls {
+            position:absolute;
+            top:50%;
+            transform:translateY(-50%);
+            background:rgba(126,28,17,0.8);
+            color:white;
+            border:none;
+            width:40px;
+            height:40px;
+            border-radius:50%;
+            cursor:pointer;
+            font-size:1.2rem;
+            z-index:10;
+            transition:all 0.3s ease;
+        }
+        .gallery-controls:hover {
+            background:#7E1C11;
+            transform:translateY(-50%) scale(1.1);
+        }
+        .gallery-prev { left:10px; }
+        .gallery-next { right:10px; }
+        .gallery-indicators {
+            position:absolute;
+            bottom:15px;
+            left:50%;
+            transform:translateX(-50%);
+            display:flex;
+            gap:8px;
+            z-index:10;
+        }
+        .gallery-dot {
+            width:10px; height:10px;
+            border-radius:50%;
+            background:rgba(255,255,255,0.5);
+            cursor:pointer;
+            transition:all 0.3s ease;
+        }
+        .gallery-dot.active {
+            background:white;
+            transform:scale(1.2);
+        }
+        .gallery-photo-count {
+            text-align:center;
+            margin-top:1rem;
+            font-size:1rem;
+            color:#666;
+            font-weight:500;
+        }
+        .logo img {
+        max-height: 80px;
+        width: auto;
+        display: block;
+        margin: 0;
+        }
+        
+        .cta-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem 2rem;
+        background: linear-gradient(135deg, #7E1C11, #8B322A);
+        color: white;
+        margin: 3rem 0;
+        }
+
+        .cta-section h3 {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        }
+
+        .cta-button {
+        background: #FFD700;
+        color: #7E1C11;
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        cursor: pointer;
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+        }
+        .cta-button:hover {
+            background:#FFC107;
+            transform:translateY(-2px);
+        }
+        
+        .footer {
+            background:#7E1C11;
+            color:white;
+            padding:2rem;
+            text-align:center;
+        }
+        .footer-links {
+            display:flex;
+            justify-content:center;
+            gap:2rem;
+            flex-wrap:wrap;
+            margin-bottom:1rem;
+        }
+        .footer-links h4 { cursor:pointer; transition:color 0.3s; }
+        .footer-links h4:hover { color:#FFD700; }
+        .whatsapp-float {
+            position:fixed;
+            bottom:20px;
+            right:20px;
+            background:#25D366;
+            color:white;
+            width:60px;
+            height:60px;
+            border-radius:50%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-size:1.8rem;
+            text-decoration:none;
+            box-shadow:0 4px 20px rgba(37,211,102,0.4);
+            transition:transform 0.3s;
+            z-index:1000;
+        }
+        .whatsapp-float:hover { transform:scale(1.1); }
+        
+        /* Wood-inspired styling */
+        .wood-highlight {
+            background: linear-gradient(135deg, #8B4513, #A0522D, #CD853F);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
+        }
+        .wood-highlight::before {
+            content: "🌳";
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background: white;
+            padding: 0.5rem;
+            border-radius: 50%;
+            font-size: 1.5rem;
+        }
+        .wood-highlight h3 {
+            color: #FFD700;
+            margin-bottom: 1rem;
+            margin-left: 1rem;
+        }
+
+        .wood-highlight p {
+            color: #ffffff;
+            margin-bottom: 1rem;
+            margin-left: 1rem;
+        }
+        
+        /* Natural material features */
+        .natural-features {
+            background: linear-gradient(135deg, #F5E6D3, #E8D5B7);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border: 2px solid #8B4513;
+        }
+        .natural-features h3 {
+            color: #8B4513;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            background: #8B4513;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        /* Highlight box */
+        .custom-highlight {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 4px solid #7E1C11;
+        }
+        .custom-highlight h3 {
+            color: #7E1C11;
+            margin-bottom: 1rem;
+        }
+        
+        @media (max-width:768px) {
+            .header-content  { flex-direction:column; gap:1rem; }
+            .header-contact  { flex-direction:column; gap:0.5rem; }
+            .service-hero h1 { font-size:2rem; }
+            .cta-button {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="/cortilujos-main/index.html" class="logo">
+                <img src="/cortilujos-main/logo.jpg" alt="CortiLujos Logo">
+            </a>
+            <div class="header-contact">
+                <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>Carrera 44 #70-88, Barranquilla</span></div>
+                <div class="contact-item"><i class="fas fa-phone"></i><span>+57 300 3903535</span></div>
+                <div class="contact-item"><i class="fab fa-instagram"></i><span>@corti_lujo</span></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="breadcrumb-content">
+            <a href="/cortilujos-main/index.html">Inicio</a> &gt; <a href="/cortilujos-main/categories/persianas.html">Persianas</a> &gt; <span>Persianas Macromadera</span>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <h1>Persianas Macromadera Barranquilla, Colombia</h1>
+        <p>La pieza ideal para brindar un aire natural a cualquier espacio. Material de alta calidad, liviano pero muy resistente, ideal para crear ambientes cálidos y naturales</p>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Persianas Macromadera: Naturaleza y Elegancia</h2>
+            <p>Las persianas de madera son la pieza ideal para brindar un aire natural a cualquier espacio. Se trata de un material de alta calidad, liviano pero muy resistente. Es ideal para crear ambientes cálidos y naturales.</p>
+            
+            <!-- Wood highlight -->
+            <div class="wood-highlight">
+                <h3>Belleza Natural de la Madera</h3>
+                <p>Cada persiana Macromadera aporta la calidez y elegancia únicas de la madera natural, transformando cualquier espacio en un ambiente acogedor y sofisticado.</p>
+            </div>
+
+            <!-- Gallery Carousel -->
+            <div class="gallery-carousel-container">
+                <div class="gallery-carousel" id="galleryCarousel"></div>
+                <button class="gallery-controls gallery-prev" onclick="changeGallerySlide(-1)"><i class="fas fa-chevron-left"></i></button>
+                <button class="gallery-controls gallery-next" onclick="changeGallerySlide(1)"><i class="fas fa-chevron-right"></i></button>
+                <div class="gallery-indicators" id="galleryIndicators"></div>
+            </div>
+            <div class="gallery-photo-count" id="photoCount"></div>
+        </section>
+
+        <section class="content-section">
+            <div class="natural-features">
+                <h3>Características del Material Macromadera</h3>
+                <p>La macromadera combina la belleza natural con la funcionalidad moderna, ofreciendo características únicas para tus espacios.</p>
+                
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-feather"></i></div>
+                    <span><strong>Liviano y Resistente:</strong> Material de alta calidad que combina ligereza con durabilidad excepcional</span>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-leaf"></i></div>
+                    <span><strong>Aire Natural:</strong> Aporta calidez y conexión con la naturaleza a cualquier ambiente</span>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-home"></i></div>
+                    <span><strong>Ambientes Cálidos:</strong> Perfecto para crear espacios acogedores y naturales</span>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <span><strong>Alta Calidad:</strong> Material premium que garantiza durabilidad y belleza por años</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="custom-highlight">
+                <h3>Fabricación Personalizada</h3>
+                <p><strong>Realizamos las persianas manuales o motorizadas a tu medida.</strong></p>
+                <p>Cada persiana Macromadera se fabrica específicamente para tu espacio, considerando dimensiones exactas y acabados que complementen tu decoración.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Ventajas de las Persianas Macromadera</h2>
+            <ul style="padding-left:1.5rem; margin:1rem 0; color:#555;">
+                <li><strong>Belleza natural:</strong> Textura y vetas únicas de la madera auténtica</li>
+                <li><strong>Durabilidad excepcional:</strong> Material resistente a la humedad y deformación</li>
+                <li><strong>Aislamiento térmico:</strong> Propiedades naturales de la madera</li>
+                <li><strong>Fácil mantenimiento:</strong> Limpieza simple y tratamientos protectores</li>
+                <li><strong>Versatilidad decorativa:</strong> Se adapta a múltiples estilos</li>
+                <li><strong>Control de luz preciso:</strong> Ajuste perfecto de luminosidad</li>
+                <li><strong>Valor agregado:</strong> Incrementa el valor estético de la propiedad</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Aplicaciones Ideales</h2>
+            <p>Las Persianas Macromadera son perfectas para:</p>
+            <ul style="padding-left:1.5rem; margin:1rem 0; color:#555;">
+                <li><strong>Salas de estar:</strong> Ambiente cálido y acogedor para la familia</li>
+                <li><strong>Dormitorios:</strong> Calidez natural que invita al descanso</li>
+                <li><strong>Estudios y bibliotecas:</strong> Elegancia clásica para espacios de trabajo</li>
+                <li><strong>Comedores:</strong> Sofisticación natural para reuniones</li>
+                <li><strong>Oficinas ejecutivas:</strong> Presencia distinguida y profesional</li>
+                <li><strong>Hoteles boutique:</strong> Atmósfera exclusiva y natural</li>
+                <li><strong>Restaurantes:</strong> Ambiente cálido y acogedor</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Tipos de Acabados</h2>
+            <p>Ofrecemos diversos acabados para personalizar tus Persianas Macromadera:</p>
+            <ul style="padding-left:1.5rem; margin:1rem 0; color:#555;">
+                <li><strong>Acabado natural:</strong> Preserva la belleza original de la madera</li>
+                <li><strong>Tonos claros:</strong> Roble, pino, maple para espacios luminosos</li>
+                <li><strong>Tonos medios:</strong> Cerezo, caoba para ambientes equilibrados</li>
+                <li><strong>Tonos oscuros:</strong> Nogal, ébano para elegancia dramática</li>
+                <li><strong>Lacados especiales:</strong> Protección adicional con brillo controlado</li>
+                <li><strong>Tratamientos anti-humedad:</strong> Protección para áreas húmedas</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Cuidado y Mantenimiento</h2>
+            <p>Para mantener la belleza de tus Persianas Macromadera:</p>
+            <ul style="padding-left:1.5rem; margin:1rem 0; color:#555;">
+                <li>Limpieza regular con paño suave y seco</li>
+                <li>Uso ocasional de productos específicos para madera</li>
+                <li>Evitar exposición directa a humedad excesiva</li>
+                <li>Revisión periódica de mecanismos de operación</li>
+                <li>Tratamiento protector anual según el ambiente</li>
+                <li>Ajustes profesionales cuando sea necesario</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Sistemas de Operación</h2>
+            <ul style="padding-left:1.5rem; margin:1rem 0; color:#555;">
+                <li><strong>Sistema manual tradicional:</strong> Cordones y varillas de calidad premium</li>
+                <li><strong>Sistema motorizado:</strong> Control remoto para máxima comodidad</li>
+                <li><strong>Automatización inteligente:</strong> Programación y horarios automáticos</li>
+                <li><strong>Control por app:</strong> Manejo desde dispositivos móviles</li>
+                <li><strong>Integración domótica:</strong> Compatibilidad con sistemas del hogar</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>¿Por qué elegir CortiLujos para Persianas Macromadera?</h2>
+            <p>En CortiLujos somos especialistas en persianas de madera de alta gama. Trabajamos exclusivamente con maderas seleccionadas y tratadas con los más altos estándares de calidad. Nuestro equipo tiene amplia experiencia en la fabricación e instalación de persianas de madera.</p>
+            <p>Ofrecemos asesoría completa en selección de tipos de madera, acabados y sistemas de operación. Cada proyecto incluye medición de precisión, fabricación artesanal e instalación profesional, con garantía extendida y servicio técnico especializado.</p>
+        </section>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h3>¿Listo para transformar tu espacio?</h3>
+        <a href="https://wa.me/573003903535" class="cta-button">Solicitar Presupuesto Gratis</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 CortiLujos. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/573003903535" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+
+    <script>
+        const productData = { name:"Persianas Micromadera", folder:"Persianas Micromadera", photos:2 };
+        let currentGallerySlide = 0;
+        function generateGalleryCarousel() {
+            const carousel = document.getElementById('galleryCarousel');
+            const indicators = document.getElementById('galleryIndicators');
+            const photoCount = document.getElementById('photoCount');
+            let items='', dots='';
+            for(let i=1;i<=productData.photos;i++){
+                items += `<div class="gallery-carousel-item"><img src="/cortilujos-main/${productData.folder}/${i}.jpeg" alt="${productData.name} ${i}" onerror="this.onerror=null;this.src='/cortilujos-main/${productData.folder}/${i}.jpg';"></div>`;
+                dots  += `<div class="gallery-dot${i===1?' active':''}" onclick="goToGallerySlide(${i-1})"></div>`;
+            }
+            carousel.innerHTML=items;
+            indicators.innerHTML=dots;
+            photoCount.innerText=`${productData.photos} fotos disponibles`;
+        }
+        function updateGalleryCarousel() {
+            const carousel= document.getElementById('galleryCarousel');
+            const dots    = document.querySelectorAll('.gallery-dot');
+            carousel.style.transform=`translateX(${-currentGallerySlide*100}%)`;
+            dots.forEach((d,i)=>d.classList.toggle('active',i===currentGallerySlide));
+        }
+        function changeGallerySlide(dir){ currentGallerySlide=(currentGallerySlide+dir+productData.photos)%productData.photos; updateGalleryCarousel(); }
+        function goToGallerySlide(i){ currentGallerySlide=i; updateGalleryCarousel(); }
+        document.addEventListener('DOMContentLoaded',()=>{ generateGalleryCarousel(); });
+    </script>
+</body>
+</html>
