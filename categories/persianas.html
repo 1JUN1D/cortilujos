@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Persianas en Barranquilla | CortiLujos</title>
-    <meta name="description" content="Especialistas en persianas de aluminio, micromadera y verticales en Barranquilla. Instalación profesional y los mejores precios.">
+    <meta name="description"
+        content="Especialistas en persianas de aluminio, micromadera y verticales en Barranquilla. Instalación profesional y los mejores precios.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- SCHEMA MARKUP ACTUALIZADO PARA PERSIANAS DE ALUMINIO -->
     <script type="application/ld+json">
@@ -55,7 +57,7 @@
         /* Header */
         .header {
             background: #fff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -115,7 +117,7 @@
             background: #8B322A;
             min-width: 250px;
             border-radius: 8px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
             opacity: 0;
             visibility: hidden;
             transform: translateY(-10px);
@@ -135,7 +137,7 @@
             text-decoration: none;
             padding: 0.8rem 1.2rem;
             transition: background 0.3s ease;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .dropdown-item:last-child {
@@ -148,7 +150,7 @@
         }
 
         .dropdown-item:hover {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
         }
 
         .header-contact {
@@ -189,7 +191,7 @@
         }
 
         .hero .availability {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             display: inline-block;
             padding: 0.5rem 1rem;
             border-radius: 25px;
@@ -276,7 +278,7 @@
             background: white;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
             text-decoration: none;
             color: inherit;
@@ -380,7 +382,7 @@
             padding: 2rem;
             border-radius: 10px;
             text-align: center;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
         }
 
         .feature-card i {
@@ -460,7 +462,7 @@
             margin-bottom: 1rem;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .faq-question {
@@ -533,16 +535,19 @@
         }
 
         .service-image {
-        width: 100%;
-        height: 150px;        /* o la altura fija que necesites */
-        overflow: hidden;     /* para recortar lo que sobrepase */
+            width: 100%;
+            height: 150px;
+            /* o la altura fija que necesites */
+            overflow: hidden;
+            /* para recortar lo que sobrepase */
         }
 
         .service-image img.custom-icon {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;    /* llena todo el espacio, recortando si es necesario */
-        display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* llena todo el espacio, recortando si es necesario */
+            display: block;
         }
 
         /* Footer */
@@ -577,10 +582,12 @@
         }
 
         .logo img {
-        max-height: 80px;   /* o la altura que quieras */
-        width: auto;
-        display: block;
-        margin: 0;     /* centra horizontalmente si hace falta */
+            max-height: 80px;
+            /* o la altura que quieras */
+            width: auto;
+            display: block;
+            margin: 0;
+            /* centra horizontalmente si hace falta */
         }
 
         /* WhatsApp Float */
@@ -609,115 +616,120 @@
 
         /* 1) Botón hamburguesa: oculto en desktop */
         .menu-toggle {
-        display: none;
-        background: none;
-        border: none;
-        font-size: 1.5rem;
-        cursor: pointer;
-        color: var(--color-primary);
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--color-primary);
         }
 
         /* 2) Estilos responsive para pantallas ≤768px */
         @media (max-width: 768px) {
-        /* Header: columna en móvil */
-        .header-content {
-            flex-direction: column;
-            gap: 1rem;
-        }
 
-        /* Mostrar el botón hamburguesa */
-        .menu-toggle {
-            display: block;
-        }
+            /* Header: columna en móvil */
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
 
-        /* Nav oculta por defecto y en columna */
-        .nav-menu {
-            display: none;
-            flex-direction: column;
-            gap: 1rem;
-            width: 100%;
-        }
+            /* Mostrar el botón hamburguesa */
+            .menu-toggle {
+                display: block;
+            }
 
-        /* Cuando <header> tenga .open, mostramos el nav */
-        .header.open .nav-menu {
-            display: flex;
-        }
+            /* Nav oculta por defecto y en columna */
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                gap: 1rem;
+                width: 100%;
+            }
 
-        /* Cada item ocupa todo el ancho */
-        .nav-item {
-            width: 100%;
-            text-align: center;
-        }
+            /* Cuando <header> tenga .open, mostramos el nav */
+            .header.open .nav-menu {
+                display: flex;
+            }
 
-        /* Dropdown móvil: oculto por defecto */
-        .dropdown {
-            position: static;
-            display: none;
-            margin-top: 0.5rem;
-            opacity: 1;         /* ya visible (pero con display:none) */
-            visibility: visible;
-            transform: none;
-        }
+            /* Cada item ocupa todo el ancho */
+            .nav-item {
+                width: 100%;
+                text-align: center;
+            }
 
-        /* Abre el submenú cuando .nav-item tenga .open */
-        .nav-item.open .dropdown {
-            display: block;
-        }
+            /* Dropdown móvil: oculto por defecto */
+            .dropdown {
+                position: static;
+                display: none;
+                margin-top: 0.5rem;
+                opacity: 1;
+                /* ya visible (pero con display:none) */
+                visibility: visible;
+                transform: none;
+            }
 
-        /* Otros ajustes responsive */
-        .header-contact {
-            align-items: center;
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 2rem;
-        }
-        .services-grid,
-        .secondary-services-grid,
-        .features-grid {
-            grid-template-columns: 1fr;
-        }
-        .footer-links {
-            flex-direction: column;
-            gap: 1rem;
-        }
-        }
+            /* Abre el submenú cuando .nav-item tenga .open */
+            .nav-item.open .dropdown {
+                display: block;
+            }
 
+            /* Otros ajustes responsive */
+            .header-contact {
+                align-items: center;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .services-grid,
+            .secondary-services-grid,
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
     </style>
 </head>
+
 <body>
-     <!-- Header -->
+    <!-- Header -->
     <header class="header">
-  <div class="header-content">
-    <a href="../index.html" class="logo">
-        <img src="../logo.jpg" alt="CortiLujos Logo">
-    </a>
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <img src="../logo.jpg" alt="CortiLujos Logo">
+            </a>
 
 
-    <!-- Botón móvil -->
-    <button class="menu-toggle" aria-label="Abrir menú">
-      <i class="fas fa-bars"></i>
-    </button>
+            <!-- Botón móvil -->
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
 
-    <!-- Navigation Menu -->
-    <nav class="nav-menu">
+            <!-- Navigation Menu -->
+            <nav class="nav-menu">
                 <div class="nav-item">
-                    <a href="/cortilujos-main/index.html" class="nav-link">
+                    <a href="/index.html" class="nav-link">
                         Inicio
                     </a>
                 </div>
-                
+
                 <div class="nav-item">
                     <a href="#" class="nav-link">
                         Cortinas <i class="fas fa-chevron-down"></i>
                     </a>
                     <div class="dropdown">
-                        <a href="/cortilujos-main/services/cortinas-romanas.html" class="dropdown-item">Cortinas Romanas</a>
-                        <a href="/cortilujos-main/services/enrollable-blackout.html" class="dropdown-item">Enrollable Black Out</a>
-                        <a href="/cortilujos-main/services/enrollable-screen.html" class="dropdown-item">Enrollable Screen</a>
-                        <a href="/cortilujos-main/services/onda-serena.html" class="dropdown-item">Onda Serena</a>
-                        <a href="/cortilujos-main/services/panel-japones.html" class="dropdown-item">Panel Japonés</a>
-                        <a href="/cortilujos-main/services/sheer-elegance.html" class="dropdown-item">Sheer Elegance</a>
+                        <a href="/services/cortinas-romanas.html" class="dropdown-item">Cortinas Romanas</a>
+                        <a href="/services/enrollable-blackout.html" class="dropdown-item">Enrollable Black Out</a>
+                        <a href="/services/enrollable-screen.html" class="dropdown-item">Enrollable Screen</a>
+                        <a href="/services/onda-serena.html" class="dropdown-item">Onda Serena</a>
+                        <a href="/services/panel-japones.html" class="dropdown-item">Panel Japonés</a>
+                        <a href="/services/sheer-elegance.html" class="dropdown-item">Sheer Elegance</a>
                     </div>
                 </div>
 
@@ -765,7 +777,9 @@
         <div class="section-header">
             <h2>Nuestro Servicio Experto de Persianas en Barranquilla</h2>
             <h3>CALIDAD SUPERIOR. INSTALACIÓN PROFESIONAL. SIEMPRE.</h3>
-            <p>Ya sea que necesites persianas de aluminio, micromadera o verticales, estamos licenciados, asegurados y calificados para brindarte un servicio rápido y profesional a un precio razonable. Especializados en todo tipo de persianas para el control perfecto de luz y privacidad.</p>
+            <p>Ya sea que necesites persianas de aluminio, micromadera o verticales, estamos licenciados, asegurados y
+                calificados para brindarte un servicio rápido y profesional a un precio razonable. Especializados en
+                todo tipo de persianas para el control perfecto de luz y privacidad.</p>
         </div>
 
         <!-- Certifications -->
@@ -784,31 +798,34 @@
         <div class="services-grid">
             <a href="persianas/persianas-aluminio.html" class="service-card">
                 <div class="service-image">
-                    <img src="/cortilujos-main/Persianas Aluminio/5.jpeg" alt="Enrollable Blackout" class="custom-icon">
+                    <img src="/Persianas Aluminio/5.jpeg" alt="Enrollable Blackout" class="custom-icon">
                 </div>
                 <div class="service-content">
                     <h4>Persianas de Aluminio</h4>
-                    <p>Persianas duraderas de aluminio, ideales para oficinas y espacios que requieren control total de luz y máxima resistencia.</p>
+                    <p>Persianas duraderas de aluminio, ideales para oficinas y espacios que requieren control total de
+                        luz y máxima resistencia.</p>
                 </div>
             </a>
 
             <a href="persianas/persianas-micromadera.html" class="service-card">
                 <div class="service-image">
-                    <img src="/cortilujos-main/Persianas Macromadera/2.jpeg" alt="Enrollable Blackout" class="custom-icon">
+                    <img src="/Persianas Macromadera/2.jpeg" alt="Enrollable Blackout" class="custom-icon">
                 </div>
                 <div class="service-content">
                     <h4>Persianas Micromadera</h4>
-                    <p>Persianas con acabado en madera que brindan calidez y elegancia natural a cualquier ambiente de tu hogar.</p>
+                    <p>Persianas con acabado en madera que brindan calidez y elegancia natural a cualquier ambiente de
+                        tu hogar.</p>
                 </div>
             </a>
 
             <a href="persianas/persiana-vertical.html" class="service-card">
                 <div class="service-image">
-                    <img src="/cortilujos-main/Persiana Vertical/8.jpeg" alt="Enrollable Blackout" class="custom-icon">
+                    <img src="/Persiana Vertical/8.jpeg" alt="Enrollable Blackout" class="custom-icon">
                 </div>
                 <div class="service-content">
                     <h4>Persianas Verticales</h4>
-                    <p>Persianas verticales perfectas para ventanas grandes y oficinas, con control preciso de luz y privacidad total.</p>
+                    <p>Persianas verticales perfectas para ventanas grandes y oficinas, con control preciso de luz y
+                        privacidad total.</p>
                 </div>
             </a>
         </div>
@@ -825,37 +842,43 @@
     <section class="why-choose">
         <div class="why-choose-content">
             <h3>¿Por Qué Somos la Mejor Opción para Persianas en Barranquilla?</h3>
-            <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Nuestra experiencia, conocimiento especializado y trabajo excepcional nos distinguen de la competencia en el sector de persianas.</p>
-            
+            <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Nuestra experiencia, conocimiento
+                especializado y trabajo excepcional nos distinguen de la competencia en el sector de persianas.</p>
+
             <div class="features-grid">
                 <div class="feature-card">
                     <i class="fas fa-star"></i>
                     <h4>Mejor Calificados en Google</h4>
-                    <p>Contamos con las mejores reseñas y calificaciones de nuestros clientes satisfechos en servicios de persianas.</p>
+                    <p>Contamos con las mejores reseñas y calificaciones de nuestros clientes satisfechos en servicios
+                        de persianas.</p>
                 </div>
 
                 <div class="feature-card">
                     <i class="fas fa-shield-check"></i>
                     <h4>Licenciados y Asegurados</h4>
-                    <p>Nuestros instaladores están completamente licenciados y nuestro equipo está asegurado, garantizando instalaciones de persianas seguras y efectivas.</p>
+                    <p>Nuestros instaladores están completamente licenciados y nuestro equipo está asegurado,
+                        garantizando instalaciones de persianas seguras y efectivas.</p>
                 </div>
 
                 <div class="feature-card">
                     <i class="fas fa-calculator"></i>
                     <h4>Presupuesto Gratuito</h4>
-                    <p>Proporcionaremos un presupuesto gratuito y personalizado para cualquier trabajo de persianas. ¡Contáctanos hoy para el tuyo!</p>
+                    <p>Proporcionaremos un presupuesto gratuito y personalizado para cualquier trabajo de persianas.
+                        ¡Contáctanos hoy para el tuyo!</p>
                 </div>
 
                 <div class="feature-card">
                     <i class="fas fa-smile"></i>
                     <h4>Atención al Cliente Amigable</h4>
-                    <p>El servicio de persianas no siempre se mantiene dentro del horario comercial. Nuestro equipo está disponible 24/7 para todas tus necesidades.</p>
+                    <p>El servicio de persianas no siempre se mantiene dentro del horario comercial. Nuestro equipo está
+                        disponible 24/7 para todas tus necesidades.</p>
                 </div>
 
                 <div class="feature-card">
                     <i class="fas fa-dollar-sign"></i>
                     <h4>Precios Competitivos</h4>
-                    <p>Nos enorgullecemos de nuestros precios justos y siempre proporcionaremos tarifas asequibles para nuestros clientes.</p>
+                    <p>Nos enorgullecemos de nuestros precios justos y siempre proporcionaremos tarifas asequibles para
+                        nuestros clientes.</p>
                 </div>
 
                 <div class="feature-card">
@@ -888,13 +911,14 @@
     <section class="faq-section">
         <div class="faq-content">
             <h3>Preguntas Frecuentes Sobre Nuestro Servicio de Persianas</h3>
-            
+
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">
                     <h4>¿Qué tipos de persianas ofrecen en Barranquilla?</h4>
                 </div>
                 <div class="faq-answer">
-                    <p>Ofrecemos persianas de aluminio, persianas micromadera y persianas verticales, todas con instalación profesional y garantía de calidad.</p>
+                    <p>Ofrecemos persianas de aluminio, persianas micromadera y persianas verticales, todas con
+                        instalación profesional y garantía de calidad.</p>
                 </div>
             </div>
 
@@ -903,7 +927,8 @@
                     <h4>¿Son costosas las persianas en Barranquilla?</h4>
                 </div>
                 <div class="faq-answer">
-                    <p>El costo de las persianas varía según el material, tamaño y tipo de instalación. Ofrecemos precios competitivos y presupuestos gratuitos para que puedas tomar la mejor decisión.</p>
+                    <p>El costo de las persianas varía según el material, tamaño y tipo de instalación. Ofrecemos
+                        precios competitivos y presupuestos gratuitos para que puedas tomar la mejor decisión.</p>
                 </div>
             </div>
 
@@ -912,7 +937,8 @@
                     <h4>¿Cuánto tiempo dura la instalación de persianas?</h4>
                 </div>
                 <div class="faq-answer">
-                    <p>La instalación típica de persianas toma entre 1-3 horas dependiendo de la cantidad de ventanas y el tipo de persiana. Nuestro equipo trabaja de manera eficiente sin comprometer la calidad.</p>
+                    <p>La instalación típica de persianas toma entre 1-3 horas dependiendo de la cantidad de ventanas y
+                        el tipo de persiana. Nuestro equipo trabaja de manera eficiente sin comprometer la calidad.</p>
                 </div>
             </div>
 
@@ -921,7 +947,9 @@
                     <h4>¿Las persianas requieren mantenimiento especial?</h4>
                 </div>
                 <div class="faq-answer">
-                    <p>Las persianas son fáciles de mantener. Las de aluminio solo requieren limpieza ocasional, las micromadera necesitan cuidado especial contra humedad, y las verticales se limpian fácilmente con aspiradora o paño húmedo.</p>
+                    <p>Las persianas son fáciles de mantener. Las de aluminio solo requieren limpieza ocasional, las
+                        micromadera necesitan cuidado especial contra humedad, y las verticales se limpian fácilmente
+                        con aspiradora o paño húmedo.</p>
                 </div>
             </div>
 
@@ -930,7 +958,8 @@
                     <h4>¿Ofrecen garantía en las persianas instaladas?</h4>
                 </div>
                 <div class="faq-answer">
-                    <p>Sí, todas nuestras persianas vienen con garantía del fabricante y garantía de instalación. Te proporcionaremos todos los detalles de cobertura al momento de la cotización.</p>
+                    <p>Sí, todas nuestras persianas vienen con garantía del fabricante y garantía de instalación. Te
+                        proporcionaremos todos los detalles de cobertura al momento de la cotización.</p>
                 </div>
             </div>
         </div>
@@ -950,7 +979,10 @@
 
                 <div class="contact-card">
                     <h4>CortiLujos</h4>
-                    <p>Nuestra empresa proporciona una gama de servicios que cubre todo, desde pequeños trabajos de mantenimiento de cortinas residenciales hasta grandes proyectos comerciales. Nuestro personal de servicio de cortinas en Barranquilla está completamente capacitado y equipado para satisfacer tus necesidades.</p>
+                    <p>Nuestra empresa proporciona una gama de servicios que cubre todo, desde pequeños trabajos de
+                        mantenimiento de cortinas residenciales hasta grandes proyectos comerciales. Nuestro personal de
+                        servicio de cortinas en Barranquilla está completamente capacitado y equipado para satisfacer
+                        tus necesidades.</p>
                 </div>
             </div>
         </div>
@@ -973,12 +1005,12 @@
         function toggleFaq(element) {
             const faqItem = element.parentElement;
             const isActive = faqItem.classList.contains('active');
-            
+
             // Close all FAQ items
             document.querySelectorAll('.faq-item').forEach(item => {
                 item.classList.remove('active');
             });
-            
+
             // Open clicked item if it wasn't already active
             if (!isActive) {
                 faqItem.classList.add('active');
@@ -1000,7 +1032,7 @@
         });
 
         // Header scroll effect
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const header = document.querySelector('.header');
             if (window.scrollY > 100) {
                 header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.15)';
@@ -1009,59 +1041,60 @@
             }
         });
 
-  // Buscamos todos los enlaces que tienen un dropdown justo después
-  document.querySelectorAll('.nav-item > .nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const parent = this.parentElement;
-      const dropdown = parent.querySelector('.dropdown');
-      
-      // Si existe un .dropdown dentro de este .nav-item…
-      if (dropdown) {
-        e.preventDefault();               // evitamos que salte la ruta
-        parent.classList.toggle('open');  // abrimos/cerramos el menú
-      }
-    });
-  });
+        // Buscamos todos los enlaces que tienen un dropdown justo después
+        document.querySelectorAll('.nav-item > .nav-link').forEach(link => {
+            link.addEventListener('click', function (e) {
+                const parent = this.parentElement;
+                const dropdown = parent.querySelector('.dropdown');
 
-  // (Opcional) Cierra otros menús al abrir uno nuevo:
-  document.querySelectorAll('.nav-item > .nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const parent = this.parentElement;
-      document.querySelectorAll('.nav-item.open')
-        .forEach(item => {
-          if (item !== parent) item.classList.remove('open');
+                // Si existe un .dropdown dentro de este .nav-item…
+                if (dropdown) {
+                    e.preventDefault();               // evitamos que salte la ruta
+                    parent.classList.toggle('open');  // abrimos/cerramos el menú
+                }
+            });
         });
-    });
-  });
 
-  document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.nav-item > .nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-      // Si este ítem tiene dropdown…
-      const dropdown = this.parentElement.querySelector('.dropdown');
-      if (!dropdown) return;           // nada que hacer
-      e.preventDefault();              // evitar la navegación
-      
-      // Cerrar otros abiertos (opcional)
-      document.querySelectorAll('.nav-item.open')
-        .forEach(item => item.classList.remove('open'));
-      
-      // Alternar el actual
-      this.parentElement.classList.toggle('open');
-    });
-  });
-});
-</script>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const toggle = document.querySelector('.menu-toggle');
-    const header = document.querySelector('.header');
+        // (Opcional) Cierra otros menús al abrir uno nuevo:
+        document.querySelectorAll('.nav-item > .nav-link').forEach(link => {
+            link.addEventListener('click', function (e) {
+                const parent = this.parentElement;
+                document.querySelectorAll('.nav-item.open')
+                    .forEach(item => {
+                        if (item !== parent) item.classList.remove('open');
+                    });
+            });
+        });
 
-    toggle.addEventListener('click', () => {
-      // alterna la clase .open en el header
-      header.classList.toggle('open');
-    });
-  });
-</script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.nav-item > .nav-link').forEach(link => {
+                link.addEventListener('click', function (e) {
+                    // Si este ítem tiene dropdown…
+                    const dropdown = this.parentElement.querySelector('.dropdown');
+                    if (!dropdown) return;           // nada que hacer
+                    e.preventDefault();              // evitar la navegación
+
+                    // Cerrar otros abiertos (opcional)
+                    document.querySelectorAll('.nav-item.open')
+                        .forEach(item => item.classList.remove('open'));
+
+                    // Alternar el actual
+                    this.parentElement.classList.toggle('open');
+                });
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggle = document.querySelector('.menu-toggle');
+            const header = document.querySelector('.header');
+
+            toggle.addEventListener('click', () => {
+                // alterna la clase .open en el header
+                header.classList.toggle('open');
+            });
+        });
+    </script>
 </body>
+
 </html>

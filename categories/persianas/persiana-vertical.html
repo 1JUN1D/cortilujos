@@ -1,69 +1,170 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Persiana Vertical Barranquilla, Colombia | CortiLujos</title>
-    <meta name="description" content="Servicio profesional de Persiana Vertical en Barranquilla. Diseño que genera equilibrio perfecto entre geometría, color, luz y funcionalidad. Instalación experta y materiales de calidad.">
+    <meta name="description"
+        content="Servicio profesional de Persiana Vertical en Barranquilla. Diseño que genera equilibrio perfecto entre geometría, color, luz y funcionalidad. Instalación experta y materiales de calidad.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        * { margin:0; padding:0; box-sizing:border-box; }
-        body { font-family:'Arial',sans-serif; line-height:1.6; color:#333; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
         /* Header */
-        .header { background:#fff; box-shadow:0 2px 10px rgba(0,0,0,0.1); position:sticky; top:0; z-index:1000; }
-        .header-content { max-width:1200px; margin:0 auto; padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center; }
-        .logo { font-size:2rem; font-weight:bold; color:#7E1C11; text-decoration:none; }
-        .header-contact { display:flex; gap:2rem; align-items:center; }
-        .contact-item { display:flex; align-items:center; gap:0.5rem; font-size:0.9rem; }
-        .contact-item i { color:#7E1C11; }
+        .header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #7E1C11;
+            text-decoration: none;
+        }
+
+        .header-contact {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .contact-item i {
+            color: #7E1C11;
+        }
+
         /* Breadcrumb */
-        .breadcrumb { background:#f8f9fa; padding:1rem 0; }
-        .breadcrumb-content { max-width:1200px; margin:0 auto; padding:0 2rem; }
-        .breadcrumb a { color:#7E1C11; text-decoration:none; margin-right:0.5rem; }
-        .breadcrumb a:hover { text-decoration:underline; }
+        .breadcrumb {
+            background: #f8f9fa;
+            padding: 1rem 0;
+        }
+
+        .breadcrumb-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .breadcrumb a {
+            color: #7E1C11;
+            text-decoration: none;
+            margin-right: 0.5rem;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
         /* Hero */
-        .service-hero { background:linear-gradient(135deg,#7E1C11,#8B322A); color:white; padding:4rem 2rem; text-align:center; }
-        .service-hero h1 { font-size:3rem; margin-bottom:1rem; font-weight:bold; }
-        .service-hero p  { font-size:1.2rem; max-width:800px; margin:0 auto; }
+        .service-hero {
+            background: linear-gradient(135deg, #7E1C11, #8B322A);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .service-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .service-hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
         /* Main content */
-        .main-content { max-width:800px; margin:0 auto; padding:3rem 2rem; }
-        .content-section { margin-bottom:3rem; }
-        .content-section h2 { font-size:2.2rem; color:#7E1C11; margin-bottom:1.5rem; }
-        .content-section p  { font-size:1.1rem; line-height:1.8; margin-bottom:1rem; color:#555; }
+        .main-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .content-section {
+            margin-bottom: 3rem;
+        }
+
+        .content-section h2 {
+            font-size: 2.2rem;
+            color: #7E1C11;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
         /* Gallery vertical */
         .gallery-carousel-container {
-            position:relative;
-            width:300px;
-            height:500px;
-            margin:2rem auto;
-            overflow:hidden;
-            border-radius:10px;
-            background:#f0f0f0;
+            position: relative;
+            width: 300px;
+            height: 500px;
+            margin: 2rem auto;
+            overflow: hidden;
+            border-radius: 10px;
+            background: #f0f0f0;
         }
+
         .gallery-carousel {
-            display:flex;
-            transition:transform 0.5s ease;
-            height:100%;
+            display: flex;
+            transition: transform 0.5s ease;
+            height: 100%;
         }
+
         .gallery-carousel-item {
-            min-width:100%;
-            height:100%;
-            display:flex;
-            align-items:center;
-            justify-content:center;
+            min-width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .gallery-carousel-item img {
-        object-fit: contain;
-        max-width: 100%;
-        max-height: 100%;
-        width: auto;
-        height: auto;
+            object-fit: contain;
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
         }
 
         .header {
             background: #fff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -120,7 +221,7 @@
             background: #8B322A;
             min-width: 250px;
             border-radius: 8px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
             opacity: 0;
             visibility: hidden;
             transform: translateY(-10px);
@@ -140,7 +241,7 @@
             text-decoration: none;
             padding: 0.8rem 1.2rem;
             transition: background 0.3s ease;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .dropdown-item:last-child {
@@ -153,7 +254,7 @@
         }
 
         .dropdown-item:hover {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
         }
 
         .header-contact {
@@ -175,130 +276,156 @@
         }
 
         .gallery-controls {
-            position:absolute;
-            top:50%;
-            transform:translateY(-50%);
-            background:rgba(126,28,17,0.8);
-            color:white;
-            border:none;
-            width:40px;
-            height:40px;
-            border-radius:50%;
-            cursor:pointer;
-            font-size:1.2rem;
-            z-index:10;
-            transition:all 0.3s ease;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(126, 28, 17, 0.8);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            z-index: 10;
+            transition: all 0.3s ease;
         }
+
         .gallery-controls:hover {
-            background:#7E1C11;
-            transform:translateY(-50%) scale(1.1);
+            background: #7E1C11;
+            transform: translateY(-50%) scale(1.1);
         }
-        .gallery-prev { left:10px; }
-        .gallery-next { right:10px; }
+
+        .gallery-prev {
+            left: 10px;
+        }
+
+        .gallery-next {
+            right: 10px;
+        }
+
         .gallery-indicators {
-            position:absolute;
-            bottom:15px;
-            left:50%;
-            transform:translateX(-50%);
-            display:flex;
-            gap:8px;
-            z-index:10;
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 10;
         }
+
         .gallery-dot {
-            width:10px; height:10px;
-            border-radius:50%;
-            background:rgba(255,255,255,0.5);
-            cursor:pointer;
-            transition:all 0.3s ease;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
+
         .gallery-dot.active {
-            background:white;
-            transform:scale(1.2);
+            background: white;
+            transform: scale(1.2);
         }
+
         .gallery-photo-count {
-            text-align:center;
-            margin-top:1rem;
-            font-size:1rem;
-            color:#666;
-            font-weight:500;
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 1rem;
+            color: #666;
+            font-weight: 500;
         }
+
         .logo img {
-        max-height: 80px;
-        width: auto;
-        display: block;
-        margin: 0;
+            max-height: 80px;
+            width: auto;
+            display: block;
+            margin: 0;
         }
-        
+
         .cta-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 3rem 2rem;
-        background: linear-gradient(135deg, #7E1C11, #8B322A);
-        color: white;
-        margin: 3rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, #7E1C11, #8B322A);
+            color: white;
+            margin: 3rem 0;
         }
 
         .cta-section h3 {
-        margin-bottom: 1rem;
-        font-size: 2rem;
+            margin-bottom: 1rem;
+            font-size: 2rem;
         }
 
         .cta-button {
-        background: #FFD700;
-        color: #7E1C11;
-        padding: 1rem 2rem;
-        font-size: 1.1rem;
-        font-weight: bold;
-        border: none;
-        border-radius: 5px;
-        text-decoration: none;
-        cursor: pointer;
-        display: block;
-        width: 100%;
-        max-width: 300px;
-        text-align: center;
+            background: #FFD700;
+            color: #7E1C11;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
         }
+
         .cta-button:hover {
-            background:#FFC107;
-            transform:translateY(-2px);
+            background: #FFC107;
+            transform: translateY(-2px);
         }
-        
+
         .footer {
-            background:#7E1C11;
-            color:white;
-            padding:2rem;
-            text-align:center;
+            background: #7E1C11;
+            color: white;
+            padding: 2rem;
+            text-align: center;
         }
+
         .footer-links {
-            display:flex;
-            justify-content:center;
-            gap:2rem;
-            flex-wrap:wrap;
-            margin-bottom:1rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
         }
-        .footer-links h4 { cursor:pointer; transition:color 0.3s; }
-        .footer-links h4:hover { color:#FFD700; }
+
+        .footer-links h4 {
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .footer-links h4:hover {
+            color: #FFD700;
+        }
+
         .whatsapp-float {
-            position:fixed;
-            bottom:20px;
-            right:20px;
-            background:#25D366;
-            color:white;
-            width:60px;
-            height:60px;
-            border-radius:50%;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            font-size:1.8rem;
-            text-decoration:none;
-            box-shadow:0 4px 20px rgba(37,211,102,0.4);
-            transition:transform 0.3s;
-            z-index:1000;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            transition: transform 0.3s;
+            z-index: 1000;
         }
-        .whatsapp-float:hover { transform:scale(1.1); }
-        
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
         /* Vertical design elements */
         .vertical-highlight {
             background: linear-gradient(135deg, #f0f8ff, #e6f3ff);
@@ -307,8 +434,9 @@
             margin: 2rem 0;
             border-left: 5px solid #7E1C11;
             position: relative;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
+
         .vertical-highlight::before {
             content: "📐";
             position: absolute;
@@ -319,12 +447,13 @@
             border-radius: 50%;
             font-size: 1.5rem;
         }
+
         .vertical-highlight h3 {
             color: #7E1C11;
             margin-bottom: 1rem;
             margin-left: 1rem;
         }
-        
+
         /* Vertical system explanation */
         .vertical-system {
             background: linear-gradient(135deg, #fafafa, #f0f0f0);
@@ -333,11 +462,13 @@
             margin: 2rem 0;
             border: 2px solid #7E1C11;
         }
+
         .vertical-system h3 {
             color: #7E1C11;
             margin-bottom: 1rem;
             text-align: center;
         }
+
         .system-feature {
             display: flex;
             align-items: center;
@@ -345,8 +476,9 @@
             padding: 1rem;
             background: white;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+
         .system-icon {
             width: 40px;
             height: 40px;
@@ -359,7 +491,7 @@
             margin-right: 1rem;
             font-size: 1.2rem;
         }
-        
+
         /* Vertical slat visualization */
         .slat-demo {
             background: white;
@@ -367,22 +499,24 @@
             border-radius: 10px;
             margin: 2rem 0;
             text-align: center;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
         }
+
         .slat-visual {
             display: flex;
             justify-content: center;
             gap: 3px;
             margin: 1rem 0;
         }
+
         .slat {
             width: 8px;
             height: 80px;
             background: linear-gradient(45deg, #7E1C11, #A0522D);
             border-radius: 2px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
-        
+
         /* Highlight box */
         .custom-highlight {
             background: linear-gradient(135deg, #f8f9fa, #e9ecef);
@@ -391,30 +525,44 @@
             margin: 2rem 0;
             border-left: 4px solid #7E1C11;
         }
+
         .custom-highlight h3 {
             color: #7E1C11;
             margin-bottom: 1rem;
         }
-        
+
         @media (max-width:768px) {
-            .header-content  { flex-direction:column; gap:1rem; }
-            .header-contact  { flex-direction:column; gap:0.5rem; }
-            .service-hero h1 { font-size:2rem; }
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .header-contact {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .service-hero h1 {
+                font-size: 2rem;
+            }
+
             .cta-button {
                 max-width: 100%;
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
         <div class="header-content">
-            <a href="/cortilujos-main/index.html" class="logo">
-                <img src="/cortilujos-main/logo.jpg" alt="CortiLujos Logo">
+            <a href="/index.html" class="logo">
+                <img src="/logo.jpg" alt="CortiLujos Logo">
             </a>
             <div class="header-contact">
-                <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>Carrera 44 #70-88, Barranquilla</span></div>
+                <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>Carrera 44 #70-88,
+                        Barranquilla</span></div>
                 <div class="contact-item"><i class="fas fa-phone"></i><span>+57 300 3903535</span></div>
                 <div class="contact-item"><i class="fab fa-instagram"></i><span>@corti_lujo</span></div>
             </div>
@@ -424,14 +572,16 @@
     <!-- Breadcrumb -->
     <div class="breadcrumb">
         <div class="breadcrumb-content">
-            <a href="/cortilujos-main/index.html">Inicio</a> &gt; <a href="/cortilujos-main/categories/persianas.html">Persianas</a> &gt; <span>Persiana Vertical</span>
+            <a href="/index.html">Inicio</a> &gt; <a href="/categories/persianas.html">Persianas</a> &gt; <span>Persiana
+                Vertical</span>
         </div>
     </div>
 
     <!-- Hero Section -->
     <section class="service-hero">
         <h1>Persiana Vertical Barranquilla, Colombia</h1>
-        <p>Su diseño genera un equilibrio perfecto entre geometría, color, luz y funcionalidad. Opción versátil y práctica para darle un toque de elegancia a cualquier espacio</p>
+        <p>Su diseño genera un equilibrio perfecto entre geometría, color, luz y funcionalidad. Opción versátil y
+            práctica para darle un toque de elegancia a cualquier espacio</p>
     </section>
 
     <!-- Main Content -->
@@ -439,19 +589,24 @@
         <section class="content-section">
             <h2>Persiana Vertical: Equilibrio y Elegancia</h2>
             <p>Su diseño genera un equilibrio perfecto entre geometría, color, luz y funcionalidad.</p>
-            <p>Las persianas verticales son una opción versátil y práctica para darle un toque de elegancia a cualquier espacio. Están compuestas por láminas o lamas que se ubican verticalmente a lo largo de un riel, pueden ser fabricadas en una gran variedad de telas y colores.</p>
-            
+            <p>Las persianas verticales son una opción versátil y práctica para darle un toque de elegancia a cualquier
+                espacio. Están compuestas por láminas o lamas que se ubican verticalmente a lo largo de un riel, pueden
+                ser fabricadas en una gran variedad de telas y colores.</p>
+
             <!-- Vertical design highlight -->
             <div class="vertical-highlight">
                 <h3>Diseño Geométrico Perfecto</h3>
-                <p>La orientación vertical de las lamas crea líneas elegantes que aportan altura visual a los espacios, mientras proporcionan control preciso de luz y privacidad.</p>
+                <p>La orientación vertical de las lamas crea líneas elegantes que aportan altura visual a los espacios,
+                    mientras proporcionan control preciso de luz y privacidad.</p>
             </div>
 
             <!-- Gallery Carousel -->
             <div class="gallery-carousel-container">
                 <div class="gallery-carousel" id="galleryCarousel"></div>
-                <button class="gallery-controls gallery-prev" onclick="changeGallerySlide(-1)"><i class="fas fa-chevron-left"></i></button>
-                <button class="gallery-controls gallery-next" onclick="changeGallerySlide(1)"><i class="fas fa-chevron-right"></i></button>
+                <button class="gallery-controls gallery-prev" onclick="changeGallerySlide(-1)"><i
+                        class="fas fa-chevron-left"></i></button>
+                <button class="gallery-controls gallery-next" onclick="changeGallerySlide(1)"><i
+                        class="fas fa-chevron-right"></i></button>
                 <div class="gallery-indicators" id="galleryIndicators"></div>
             </div>
             <div class="gallery-photo-count" id="photoCount"></div>
@@ -460,23 +615,25 @@
         <section class="content-section">
             <div class="vertical-system">
                 <h3>Sistema de Láminas Verticales</h3>
-                <p>Están compuestas por láminas o lamas que se ubican verticalmente a lo largo de un riel, pueden ser fabricadas en una gran variedad de telas y colores.</p>
-                
+                <p>Están compuestas por láminas o lamas que se ubican verticalmente a lo largo de un riel, pueden ser
+                    fabricadas en una gran variedad de telas y colores.</p>
+
                 <div class="system-feature">
                     <div class="system-icon"><i class="fas fa-grip-lines-vertical"></i></div>
-                    <span><strong>Láminas Verticales:</strong> Orientación vertical que maximiza la funcionalidad y estética</span>
+                    <span><strong>Láminas Verticales:</strong> Orientación vertical que maximiza la funcionalidad y
+                        estética</span>
                 </div>
-                
+
                 <div class="system-feature">
                     <div class="system-icon"><i class="fas fa-road"></i></div>
                     <span><strong>Sistema de Riel:</strong> Mecanismo superior robusto para movimiento suave</span>
                 </div>
-                
+
                 <div class="system-feature">
                     <div class="system-icon"><i class="fas fa-swatchbook"></i></div>
                     <span><strong>Gran Variedad:</strong> Múltiples opciones de telas, texturas y colores</span>
                 </div>
-                
+
                 <!-- Visual demonstration -->
                 <div class="slat-demo">
                     <h4 style="color: #7E1C11; margin-bottom: 1rem;">Visualización de Láminas Verticales</h4>
@@ -489,7 +646,8 @@
                         <div class="slat"></div>
                         <div class="slat"></div>
                     </div>
-                    <p style="font-style: italic; color: #666;">Cada lámina puede girar independientemente para control preciso de luz</p>
+                    <p style="font-style: italic; color: #666;">Cada lámina puede girar independientemente para control
+                        preciso de luz</p>
                 </div>
             </div>
         </section>
@@ -498,7 +656,8 @@
             <div class="custom-highlight">
                 <h3>Fabricación Personalizada</h3>
                 <p><strong>Realizamos las cortinas manuales o motorizadas a tu medida.</strong></p>
-                <p>Cada persiana vertical se diseña específicamente para tu espacio, considerando dimensiones exactas y necesidades funcionales específicas.</p>
+                <p>Cada persiana vertical se diseña específicamente para tu espacio, considerando dimensiones exactas y
+                    necesidades funcionales específicas.</p>
             </div>
         </section>
 
@@ -569,8 +728,12 @@
 
         <section class="content-section">
             <h2>¿Por qué elegir CortiLujos para Persianas Verticales?</h2>
-            <p>En CortiLujos entendemos la importancia del equilibrio entre geometría, color, luz y funcionalidad. Nuestros especialistas tienen amplia experiencia en el diseño e instalación de persianas verticales para todo tipo de espacios y necesidades.</p>
-            <p>Trabajamos con materiales de primera calidad y ofrecemos asesoría completa en selección de telas, colores y sistemas de control. Cada instalación incluye medición de precisión, fabricación personalizada y garantía extendida con servicio técnico especializado.</p>
+            <p>En CortiLujos entendemos la importancia del equilibrio entre geometría, color, luz y funcionalidad.
+                Nuestros especialistas tienen amplia experiencia en el diseño e instalación de persianas verticales para
+                todo tipo de espacios y necesidades.</p>
+            <p>Trabajamos con materiales de primera calidad y ofrecemos asesoría completa en selección de telas, colores
+                y sistemas de control. Cada instalación incluye medición de precisión, fabricación personalizada y
+                garantía extendida con servicio técnico especializado.</p>
         </section>
     </main>
 
@@ -591,30 +754,31 @@
     <a href="https://wa.me/573003903535" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
 
     <script>
-        const productData = { name:"Persiana Vertical", folder:"Persiana Vertical", photos:9 };
+        const productData = { name: "Persiana Vertical", folder: "Persiana Vertical", photos: 9 };
         let currentGallerySlide = 0;
         function generateGalleryCarousel() {
             const carousel = document.getElementById('galleryCarousel');
             const indicators = document.getElementById('galleryIndicators');
             const photoCount = document.getElementById('photoCount');
-            let items='', dots='';
-            for(let i=1;i<=productData.photos;i++){
-                items += `<div class="gallery-carousel-item"><img src="/cortilujos-main/${productData.folder}/${i}.jpeg" alt="${productData.name} ${i}" onerror="this.onerror=null;this.src='/cortilujos-main/${productData.folder}/${i}.jpg';"></div>`;
-                dots  += `<div class="gallery-dot${i===1?' active':''}" onclick="goToGallerySlide(${i-1})"></div>`;
+            let items = '', dots = '';
+            for (let i = 1; i <= productData.photos; i++) {
+                items += `<div class="gallery-carousel-item"><img src="/${productData.folder}/${i}.jpeg" alt="${productData.name} ${i}" onerror="this.onerror=null;this.src='/${productData.folder}/${i}.jpg';"></div>`;
+                dots += `<div class="gallery-dot${i === 1 ? ' active' : ''}" onclick="goToGallerySlide(${i - 1})"></div>`;
             }
-            carousel.innerHTML=items;
-            indicators.innerHTML=dots;
-            photoCount.innerText=`${productData.photos} fotos disponibles`;
+            carousel.innerHTML = items;
+            indicators.innerHTML = dots;
+            photoCount.innerText = `${productData.photos} fotos disponibles`;
         }
         function updateGalleryCarousel() {
-            const carousel= document.getElementById('galleryCarousel');
-            const dots    = document.querySelectorAll('.gallery-dot');
-            carousel.style.transform=`translateX(${-currentGallerySlide*100}%)`;
-            dots.forEach((d,i)=>d.classList.toggle('active',i===currentGallerySlide));
+            const carousel = document.getElementById('galleryCarousel');
+            const dots = document.querySelectorAll('.gallery-dot');
+            carousel.style.transform = `translateX(${-currentGallerySlide * 100}%)`;
+            dots.forEach((d, i) => d.classList.toggle('active', i === currentGallerySlide));
         }
-        function changeGallerySlide(dir){ currentGallerySlide=(currentGallerySlide+dir+productData.photos)%productData.photos; updateGalleryCarousel(); }
-        function goToGallerySlide(i){ currentGallerySlide=i; updateGalleryCarousel(); }
-        document.addEventListener('DOMContentLoaded',()=>{ generateGalleryCarousel(); });
+        function changeGallerySlide(dir) { currentGallerySlide = (currentGallerySlide + dir + productData.photos) % productData.photos; updateGalleryCarousel(); }
+        function goToGallerySlide(i) { currentGallerySlide = i; updateGalleryCarousel(); }
+        document.addEventListener('DOMContentLoaded', () => { generateGalleryCarousel(); });
     </script>
 </body>
+
 </html>
