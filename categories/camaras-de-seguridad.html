@@ -943,7 +943,7 @@
             const photoCount = document.getElementById('photoCount');
             let items = '', dots = '';
             for (let i = 1; i <= productData.photos; i++) {
-                items += `<div class="gallery-carousel-item"><img src="/${productData.folder}/${i}.jpeg" alt="${productData.name} ${i}" onerror="this.onerror=null;this.src='/${productData.folder}/${i}.jpg';"></div>`;
+                items += `<div class="gallery-carousel-item"><img src="../${productData.folder}/${i}.jpeg" alt="${productData.name} ${i}" onerror="this.onerror=null;this.src='/${productData.folder}/${i}.jpg';"></div>`;
                 dots += `<div class="gallery-dot${i === 1 ? ' active' : ''}" onclick="goToGallerySlide(${i - 1})"></div>`;
             }
             carousel.innerHTML = items;
