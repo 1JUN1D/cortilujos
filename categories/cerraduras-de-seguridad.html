@@ -969,7 +969,7 @@ function generateGalleryCarousel() {
     
     for (let i = 1; i <= productData.photos; i++) {
         // Cambié .jpeg por .jpg directamente y quité el onerror innecesario
-        items += `<div class="gallery-carousel-item"><img src="/${productData.folder}/${i}.jpg" alt="${productData.name} ${i}"></div>`;
+        items += `<div class="gallery-carousel-item"><img src="/${productData.folder}/${i}.jpeg" alt="${productData.name} ${i}"></div>`;
         dots += `<div class="gallery-dot${i === 1 ? ' active' : ''}" onclick="goToGallerySlide(${i - 1})"></div>`;
     }
     
