@@ -935,21 +935,29 @@
     <a href="https://wa.me/573003903535" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
 
     <script>
-        const productData = { name: "Camaras de Seguridad", folder: "Camaras de Seguridad", photos: 9 };
-        let currentGallerySlide = 0;
-        function generateGalleryCarousel() {
-            const carousel = document.getElementById('galleryCarousel');
-            const indicators = document.getElementById('galleryIndicators');
-            const photoCount = document.getElementById('photoCount');
-            let items = '', dots = '';
-            for (let i = 1; i <= productData.photos; i++) {
-                items += `<div class="gallery-carousel-item"><img src="../${productData.folder}/${i}.jpeg" alt="${productData.name} ${i}" onerror="this.onerror=null;this.src='/${productData.folder}/${i}.jpg';"></div>`;
-                dots += `<div class="gallery-dot${i === 1 ? ' active' : ''}" onclick="goToGallerySlide(${i - 1})"></div>`;
-            }
-            carousel.innerHTML = items;
-            indicators.innerHTML = dots;
-            photoCount.innerText = `${productData.photos} fotos disponibles`;
-        }
+
+        const productData = { 
+    name: "Camaras de Seguridad", 
+    folder: "Camaras%20de%20seguridad", // Nota: 's' minúscula en 'seguridad'
+    photos: 9 
+};
+
+function generateGalleryCarousel() {
+    const carousel = document.getElementById('galleryCarousel');
+    const indicators = document.getElementById('galleryIndicators');
+    const photoCount = document.getElementById('photoCount');
+    let items = '', dots = '';
+    
+    for (let i = 1; i <= productData.photos; i++) {
+        // Cambia .jpeg por .jpg directamente
+        items += `<div class="gallery-carousel-item"><img src="/${productData.folder}/${i}.jpg" alt="${productData.name} ${i}"></div>`;
+        dots += `<div class="gallery-dot${i === 1 ? ' active' : ''}" onclick="goToGallerySlide(${i - 1})"></div>`;
+    }
+    
+    carousel.innerHTML = items;
+    indicators.innerHTML = dots;
+    photoCount.innerText = `${productData.photos} fotos disponibles`;
+}
         function updateGalleryCarousel() {
             const carousel = document.getElementById('galleryCarousel');
             const dots = document.querySelectorAll('.gallery-dot');
