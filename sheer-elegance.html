@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheer Elegance Barranquilla, Colombia | CortiLujos</title>
+    <meta name="description"
+        content="Servicio profesional de cortinas Sheer Elegance en Barranquilla. Cortina moderna y elegante con franjas horizontales opacas y traslúcidas para control de luz y privacidad.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" href="/logo_negro_corto.png" type="image/x-icon">
+    <style>
+        /* Variables CSS Profesionales */
+        :root {
+            --primary-dark: #1a1a1a;
+            --primary-black: #000000;
+            --secondary-dark: #2c2c2c;
+            --accent-gray: #6c757d;
+            --light-gray: #f8f9fa;
+            --medium-gray: #e9ecef;
+            --border-gray: #dee2e6;
+            --white-pure: #FFFFFF;
+            --text-dark: #212529;
+            --text-light: #6c757d;
+            --shadow-dark: rgba(0, 0, 0, 0.15);
+            --shadow-light: rgba(0, 0, 0, 0.08);
+            --accent-blue: #007bff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--white-pure);
+            min-height: 100vh;
+        }
+
+        /* Header Professional */
+        .header {
+            background: var(--primary-black);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 4px 20px var(--shadow-dark);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-gray);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--white-pure);
+            text-decoration: none;
+            text-shadow: none;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+            color: var(--accent-blue);
+        }
+
+        .logo img {
+            max-height: 80px;
+            width: auto;
+            display: block;
+            margin: 0;
+            filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Navigation Menu Professional */
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            color: var(--white-pure);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-blue);
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .nav-link i {
+            font-size: 0.8rem;
+        }
+
+        /* Dropdown Menu Professional */
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--secondary-dark);
+            min-width: 250px;
+            border-radius: 8px;
+            box-shadow: 0 15px 35px var(--shadow-dark);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-15px);
+            transition: all 0.4s ease;
+            z-index: 1000;
+            border: 1px solid var(--border-gray);
+        }
+
+        .nav-item:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-item {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .dropdown-item:last-child {
+            border-bottom: none;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .dropdown-item:first-child {
+            border-radius: 8px 8px 0 0;
+        }
+
+        .dropdown-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--accent-blue);
+            padding-left: 2rem;
+        }
+
+        .header-contact {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            gap: 0.3rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--white-pure);
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            color: var(--accent-blue);
+            transform: translateX(-2px);
+        }
+
+        .contact-item i {
+            color: var(--accent-blue);
+        }
+
+        /* Breadcrumb Professional */
+        .breadcrumb {
+            background: var(--light-gray);
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--border-gray);
+            box-shadow: 0 2px 10px var(--shadow-light);
+        }
+
+        .breadcrumb-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            font-weight: 500;
+        }
+
+        .breadcrumb a {
+            color: var(--text-dark);
+            text-decoration: none;
+            margin-right: 0.5rem;
+            transition: all 0.3s ease;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+        }
+
+        .breadcrumb a:hover {
+            background: rgba(0, 123, 255, 0.1);
+            color: var(--accent-blue);
+            text-decoration: underline;
+        }
+
+        /* Hero Slider Single Image */
+        .hero-slider {
+            position: relative;
+            height: 70vh;
+            min-height: 500px;
+            max-height: 800px;
+            overflow: hidden;
+            background: var(--light-gray);
+        }
+
+        .hero-slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        /* Responsive Hero Slider */
+        @media (max-width: 1024px) {
+            .hero-slider {
+                height: 60vh;
+                min-height: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-slider {
+                height: 50vh;
+                min-height: 350px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-slider {
+                height: 40vh;
+                min-height: 300px;
+            }
+        }
+
+        /* Hero Section Professional */
+        .service-hero {
+            background: var(--primary-black);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(44, 44, 44, 0.8));
+            pointer-events: none;
+        }
+
+        .service-hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            text-shadow: none;
+            color: var(--white-pure);
+            line-height: 1.2;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-hero p {
+            font-size: 1.3rem;
+            max-width: 900px;
+            margin: 0 auto;
+            text-shadow: none;
+            position: relative;
+            z-index: 2;
+            line-height: 1.8;
+        }
+
+        /* Main Content Professional */
+        .main-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            background: var(--white-pure);
+            border-radius: 0;
+            margin-top: 0;
+            position: relative;
+            z-index: 10;
+            box-shadow: none;
+        }
+
+        .content-section {
+            margin-bottom: 4rem;
+        }
+
+        .content-section h2 {
+            font-size: 2.5rem;
+            color: var(--text-dark);
+            margin-bottom: 2rem;
+            text-shadow: none;
+            position: relative;
+            padding-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        .content-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--accent-blue);
+            border-radius: 2px;
+        }
+
+        .content-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+            text-align: justify;
+        }
+
+        .content-section ul {
+            padding-left: 2rem;
+            margin: 2rem 0;
+            color: var(--text-dark);
+        }
+
+        .content-section li {
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+            position: relative;
+        }
+
+        .content-section li::marker {
+            color: var(--accent-blue);
+        }
+
+        /* Gallery Carousel Professional */
+        .gallery-carousel-container {
+            position: relative;
+            width: 500px;
+            height: 600px;
+            margin: 3rem auto;
+            overflow: hidden;
+            border-radius: 15px;
+            background: var(--light-gray);
+            box-shadow: 0 10px 30px var(--shadow-dark);
+            border: 2px solid var(--border-gray);
+        }
+
+        .gallery-carousel {
+            display: flex;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            height: 100%;
+        }
+
+        .gallery-carousel-item {
+            min-width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--light-gray);
+        }
+
+        .gallery-carousel-item img {
+            object-fit: contain;
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-carousel-item:hover img {
+            transform: scale(1.02);
+        }
+
+        .gallery-controls {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--text-dark);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            z-index: 10;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(10px);
+        }
+
+        .gallery-controls:hover {
+            background: var(--white-pure);
+            color: var(--accent-blue);
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .gallery-controls:active {
+            transform: translateY(-50%) scale(0.95);
+        }
+
+        .gallery-prev {
+            left: 15px;
+        }
+
+        .gallery-next {
+            right: 15px;
+        }
+
+        .gallery-indicators {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .gallery-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.6);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.8);
+        }
+
+        .gallery-dot:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: scale(1.1);
+            border-color: var(--white-pure);
+        }
+
+        .gallery-dot.active {
+            background: var(--accent-blue);
+            border-color: var(--accent-blue);
+            transform: scale(1.3);
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+        }
+
+        .gallery-photo-count {
+            text-align: center;
+            margin-top: 1.5rem;
+            font-size: 1rem;
+            color: var(--text-light);
+            font-weight: 500;
+            background: var(--light-gray);
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            display: inline-block;
+            border: 1px solid var(--border-gray);
+        }
+
+        /* CTA Section Professional */
+        .cta-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 4rem 2rem;
+            background: var(--primary-black);
+            color: white;
+            margin: 4rem 0;
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 40px var(--shadow-dark);
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(44, 44, 44, 0.8));
+            pointer-events: none;
+        }
+
+        .cta-section h3 {
+            margin-bottom: 2.5rem;
+            font-size: 2.5rem;
+            font-weight: 300;
+            text-shadow: none;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            line-height: 1.2;
+            letter-spacing: 1px;
+        }
+
+        .cta-button {
+            background: transparent;
+            color: var(--white-pure);
+            padding: 1.3rem 3rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border: 2px solid var(--white-pure);
+            border-radius: 50px;
+            text-decoration: none;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .cta-button:hover {
+            background: var(--white-pure);
+            color: var(--primary-black);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(255, 255, 255, 0.2);
+        }
+
+        /* CTA Responsive */
+        @media (max-width: 768px) {
+            .cta-section {
+                padding: 3rem 1.5rem;
+                margin: 3rem 0;
+            }
+            
+            .cta-section h3 {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+            
+            .cta-button {
+                padding: 1.1rem 2.5rem;
+                font-size: 1rem;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cta-section h3 {
+                font-size: 1.8rem;
+            }
+            
+            .cta-button {
+                padding: 1rem 2rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Footer Professional */
+        .footer {
+            background: var(--primary-black);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: none;
+            pointer-events: none;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .footer-links h4 {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-size: 1.1rem;
+        }
+
+        .footer-links h4:hover {
+            color: var(--accent-blue);
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* WhatsApp Float Professional */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            border: 3px solid var(--accent-blue);
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.15) rotate(10deg);
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.6);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .header-contact {
+                flex-direction: column;
+                gap: 0.5rem;
+                align-items: center;
+                text-align: center;
+            }
+
+            .service-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .service-hero p {
+                font-size: 1.1rem;
+            }
+
+            .main-content {
+                padding: 3rem 1.5rem;
+            }
+
+            .content-section h2 {
+                font-size: 2rem;
+            }
+
+            .gallery-carousel-container {
+                width: 100%;
+                max-width: 450px;
+                height: 550px;
+            }
+
+            .cta-button {
+                max-width: 100%;
+                font-size: 1.1rem;
+                padding: 1rem 2rem;
+            }
+
+            .cta-section h3 {
+                font-size: 2rem;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .breadcrumb-content {
+                padding: 0 1rem;
+            }
+
+            .gallery-controls {
+                width: 40px;
+                height: 40px;
+                font-size: 1.1rem;
+            }
+
+            .gallery-prev {
+                left: 10px;
+            }
+
+            .gallery-next {
+                right: 10px;
+            }
+        }
+
+        /* Extra small devices */
+        @media (max-width: 480px) {
+            .service-hero {
+                padding: 3rem 1rem;
+            }
+
+            .service-hero h1 {
+                font-size: 2rem;
+            }
+
+            .content-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .main-content {
+                padding: 2rem 1rem;
+            }
+
+            .gallery-carousel-container {
+                height: 450px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="/index.html" class="logo">
+                <img src="/logo_negro.png" alt="CortiLujos Logo">
+            </a>
+            <div class="header-contact">
+                <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>Carrera 44 #70-88,
+                        Barranquilla</span></div>
+                <div class="contact-item"><i class="fas fa-phone"></i><span>+57 300 3903535</span></div>
+                <div class="contact-item"><i class="fab fa-instagram"></i><span>@corti_lujo</span></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="breadcrumb-content">
+            <a href="/index.html">Inicio</a> &gt; <span>Sheer Elegance</span>
+        </div>
+    </div>
+
+    <!-- Hero Slider Section -->
+    <section class="hero-slider">
+        <img src="/Sheer/8.jpeg" alt="Sheer elegance - CortiLujos Barranquilla">
+    </section>
+
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <h1>Sheer Elegance Barranquilla, Colombia</h1>
+        <p>Cortina moderna y elegante con franjas horizontales opacas y traslúcidas intercaladas para graduar la entrada
+            de luz y privacidad en los espacios</p>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="content-section">
+            <h2>Sheer Elegance: Sofisticación Moderna</h2>
+            <p>Sheer elegance es un tipo de cortina moderna y elegante que se compone de franjas horizontales opacas y
+                traslúcidas intercaladas que ofrecen la facilidad de graduar la entrada de luz y la privacidad en los
+                espacios.</p>
+
+            <!-- Sheer elegance highlight -->
+            <div class="sheer-highlight">
+                <h3>Elegancia Transparente</h3>
+                <p>La perfecta combinación entre funcionalidad y estética, donde cada franja cuenta una historia de luz
+                    y sombra, creando ambientes únicos y sofisticados.</p>
+            </div>
+
+            <!-- Gallery Carousel -->
+            <div class="gallery-carousel-container">
+                <div class="gallery-carousel" id="galleryCarousel"></div>
+                <button class="gallery-controls gallery-prev" onclick="changeGallerySlide(-1)"><i
+                        class="fas fa-chevron-left"></i></button>
+                <button class="gallery-controls gallery-next" onclick="changeGallerySlide(1)"><i
+                        class="fas fa-chevron-right"></i></button>
+                <div class="gallery-indicators" id="galleryIndicators"></div>
+            </div>
+            <div class="gallery-photo-count" id="photoCount"></div>
+        </section>
+
+        <section class="content-section">
+            <div class="strip-pattern">
+                <h3>Sistema de Franjas Intercaladas</h3>
+                <p>El diseño único de Sheer Elegance combina franjas horizontales con diferentes niveles de opacidad
+                    para crear efectos visuales extraordinarios.</p>
+
+                <div class="strip-demo">
+                    <div class="strip-visual opaque"></div>
+                    <span><strong>Franjas Opacas:</strong> Bloquean completamente la luz para máxima privacidad</span>
+                </div>
+
+                <div class="strip-demo">
+                    <div class="strip-visual translucent"></div>
+                    <span><strong>Franjas Traslúcidas:</strong> Permiten el paso suave de la luz natural</span>
+                </div>
+
+                <p style="margin-top: 1rem; font-style: italic; color: #7E1C11;">
+                    <strong>La intercalación inteligente de estas franjas permite graduar perfectamente la entrada de
+                        luz y el nivel de privacidad según tus necesidades.</strong>
+                </p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="custom-highlight">
+                <h3>Fabricación Personalizada</h3>
+                <p><strong>Realizamos las cortinas manuales o motorizadas a tu medida.</strong></p>
+                <p>Cada cortina Sheer Elegance se diseña específicamente para tu espacio, considerando la orientación
+                    solar y tus preferencias de privacidad.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Características del Sheer Elegance</h2>
+            <ul style="padding-left:1.5rem; margin:1rem 0; color:#555;">
+                <li><strong>Control de luz graduable:</strong> Ajusta la luminosidad sin perder la vista exterior</li>
+                <li><strong>Franjas intercaladas:</strong> Diseño único de opacidad alternada</li>
+                <li><strong>Privacidad inteligente:</strong> Protección visual sin oscurecer completamente</li>
+                <li><strong>Estética moderna:</strong> Líneas horizontales que amplían visualmente el espacio</li>
+                <li><strong>Versatilidad funcional:</strong> Perfecta para cualquier hora del día</li>
+                <li><strong>Fácil operación:</strong> Sistema suave de apertura y cierre</li>
+                <li><strong>Durabilidad garantizada:</strong> Materiales de alta calidad y resistencia</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Aplicaciones Ideales</h2>
+            <p>Las cortinas Sheer Elegance son perfectas para:</p>
+            <ul style="padding-left:1.5rem; margin:1rem 0; color:#555;">
+                <li><strong>Salas de estar:</strong> Ambiente acogedor con luz natural controlada</li>
+                <li><strong>Oficinas modernas:</strong> Productividad sin deslumbramiento</li>
+                <li><strong>Dormitorios:</strong> Privacidad manteniendo la conexión con el exterior</li>
+                <li><strong>Comedores:</strong> Ambiente elegante para reuniones familiares</li>
+                <li><strong>Espacios comerciales:</strong> Profesionalismo y sofisticación</li>
+                <li><strong>Consultorios:</strong> Ambiente relajante y privado</li>
+                <li><strong>Hoteles y restaurantes:</strong> Atmósfera exclusiva para huéspedes</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Ventajas del Sistema Sheer Elegance</h2>
+            <ul style="padding-left:1.5rem; margin:1rem 0; color:#555;">
+                <li>Control preciso de la luminosidad ambiente</li>
+                <li>Mantenimiento de la vista hacia el exterior</li>
+                <li>Protección UV sin oscurecimiento total</li>
+                <li>Efecto decorativo único y moderno</li>
+                <li>Ahorro energético por control natural de luz</li>
+                <li>Facilidad de limpieza y mantenimiento</li>
+                <li>Compatibilidad con sistemas de automatización</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Opciones de Personalización</h2>
+            <p>Trabajamos con una amplia variedad de opciones para tu Sheer Elegance:</p>
+            <ul style="padding-left:1.5rem; margin:1rem 0; color:#555;">
+                <li><strong>Colores neutros:</strong> Blanco, beige, gris para versatilidad máxima</li>
+                <li><strong>Tonos cálidos:</strong> Cremas y dorados para ambientes acogedores</li>
+                <li><strong>Acabados modernos:</strong> Grises y negros para espacios contemporáneos</li>
+                <li><strong>Texturas especiales:</strong> Materiales con diferentes tactilidades</li>
+                <li><strong>Anchos de franja:</strong> Diferentes proporciones según el efecto deseado</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Sistemas de Operación</h2>
+            <ul style="padding-left:1.5rem; margin:1rem 0; color:#555;">
+                <li><strong>Sistema manual:</strong> Cordón lateral para operación tradicional</li>
+                <li><strong>Sistema motorizado:</strong> Control remoto para máxima comodidad</li>
+                <li><strong>Automatización programable:</strong> Horarios predefinidos de apertura</li>
+                <li><strong>Control inteligente:</strong> Integración con sistemas domóticos</li>
+                <li><strong>Sensores de luz:</strong> Ajuste automático según luminosidad exterior</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>¿Por qué elegir CortiLujos para Sheer Elegance?</h2>
+            <p>En CortiLujos somos especialistas en cortinas Sheer Elegance. Entendemos la importancia del balance
+                perfecto entre privacidad y luminosidad, y trabajamos con materiales de primera calidad que garantizan
+                durabilidad y funcionamiento óptimo.</p>
+            <p>Nuestro proceso incluye asesoría personalizada, medición de precisión, fabricación a medida e instalación
+                profesional. Cada proyecto cuenta con garantía extendida y servicio técnico especializado para mantener
+                tu inversión en perfectas condiciones.</p>
+        </section>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h3>¿Listo para transformar tu espacio?</h3>
+        <a href="https://wa.me/573003903535" class="cta-button">Solicitar Presupuesto Gratis</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 CortiLujos. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/573003903535" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+
+    <script>
+        const productData = { name: "Sheer", folder: "Sheer", photos: 10 };
+        let currentGallerySlide = 0;
+        function generateGalleryCarousel() {
+            const carousel = document.getElementById('galleryCarousel');
+            const indicators = document.getElementById('galleryIndicators');
+            const photoCount = document.getElementById('photoCount');
+            let items = '', dots = '';
+            for (let i = 1; i <= productData.photos; i++) {
+                items += `<div class="gallery-carousel-item"><img src="/${productData.folder}/${i}.jpeg" alt="${productData.name} ${i}" onerror="this.onerror=null;this.src='/${productData.folder}/${i}.jpg';"></div>`;
+                dots += `<div class="gallery-dot${i === 1 ? ' active' : ''}" onclick="goToGallerySlide(${i - 1})"></div>`;
+            }
+            carousel.innerHTML = items;
+            indicators.innerHTML = dots;
+            photoCount.innerText = `${productData.photos} fotos disponibles`;
+        }
+        function updateGalleryCarousel() {
+            const carousel = document.getElementById('galleryCarousel');
+            const dots = document.querySelectorAll('.gallery-dot');
+            carousel.style.transform = `translateX(${-currentGallerySlide * 100}%)`;
+            dots.forEach((d, i) => d.classList.toggle('active', i === currentGallerySlide));
+        }
+        function changeGallerySlide(dir) { currentGallerySlide = (currentGallerySlide + dir + productData.photos) % productData.photos; updateGalleryCarousel(); }
+        function goToGallerySlide(i) { currentGallerySlide = i; updateGalleryCarousel(); }
+        document.addEventListener('DOMContentLoaded', () => { generateGalleryCarousel(); });
+    </script>
+</body>
+
+</html>

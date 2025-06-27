@@ -7,8 +7,9 @@
     <title>Cortinas en Barranquilla | CortiLujos</title>
     <meta name="description"
         content="Especialistas en cortinas, persianas y decoración en Barranquilla. Servicio profesional, instalación garantizada y los mejores precios.">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-<link rel="shortcut icon" href="../logo.jpg" type="image/x-icon">
+<link rel="shortcut icon" href="logo_negro_corto.png" type="image/x-icon">
     <!-- SCHEMA MARKUP OPTIMIZADO PARA CORTILUJOS -->
     <script type="application/ld+json">
     {
@@ -87,6 +88,25 @@
     </script>
 
     <style>
+        /* CortiLujos - Estilos de Lujo */
+
+        /* Variables CSS de Lujo */
+        :root {
+            --primary-dark: #1a1a1a;
+            --primary-black: #000000;
+            --secondary-dark: #2c2c2c;
+            --accent-gray: #6c757d;
+            --light-gray: #f8f9fa;
+            --medium-gray: #e9ecef;
+            --border-gray: #dee2e6;
+            --white-pure: #FFFFFF;
+            --text-dark: #212529;
+            --text-light: #6c757d;
+            --shadow-dark: rgba(0, 0, 0, 0.15);
+            --shadow-light: rgba(0, 0, 0, 0.08);
+            --accent-blue: #007bff;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -96,16 +116,20 @@
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: var(--text-dark);
+            background: var(--white-pure);
+            min-height: 100vh;
         }
 
-        /* Header */
+        /* Header Luxury */
         .header {
-            background: #fff;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background: var(--primary-black);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 4px 20px var(--shadow-dark);
             position: sticky;
             top: 0;
             z-index: 1000;
+            border-bottom: 1px solid var(--border-gray);
         }
 
         .header-content {
@@ -120,10 +144,11 @@
         .logo {
             font-size: 2rem;
             font-weight: bold;
-            color: #7E1C11;
+            color: var(--white-pure);
+            text-shadow: none;
         }
 
-        /* Navigation Menu */
+        /* Navigation Menu Luxury */
         .nav-menu {
             display: flex;
             gap: 2rem;
@@ -135,38 +160,42 @@
         }
 
         .nav-link {
-            color: #333;
+            color: var(--white-pure);
             text-decoration: none;
             font-weight: 500;
             padding: 0.5rem 1rem;
             display: flex;
             align-items: center;
             gap: 0.3rem;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
+            border-radius: 5px;
         }
 
         .nav-link:hover {
-            color: #7E1C11;
+            color: var(--accent-blue);
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
         }
 
         .nav-link i {
             font-size: 0.8rem;
         }
 
-        /* Dropdown Menu */
+        /* Dropdown Menu Luxury */
         .dropdown {
             position: absolute;
             top: 100%;
             left: 0;
-            background: #8B322A;
+            background: var(--secondary-dark);
             min-width: 250px;
             border-radius: 8px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 15px 35px var(--shadow-dark);
             opacity: 0;
             visibility: hidden;
-            transform: translateY(-10px);
-            transition: all 0.3s ease;
+            transform: translateY(-15px);
+            transition: all 0.4s ease;
             z-index: 1000;
+            border: 1px solid var(--border-gray);
         }
 
         .nav-item:hover .dropdown {
@@ -179,22 +208,24 @@
             display: block;
             color: white;
             text-decoration: none;
-            padding: 0.8rem 1.2rem;
-            transition: background 0.3s ease;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 1.5rem;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
         }
 
         .dropdown-item:last-child {
             border-bottom: none;
-            border-radius: 0 0 8px 8px;
+            border-radius: 0 0 12px 12px;
         }
 
         .dropdown-item:first-child {
-            border-radius: 8px 8px 0 0;
+            border-radius: 12px 12px 0 0;
         }
 
         .dropdown-item:hover {
             background: rgba(255, 255, 255, 0.1);
+            color: var(--accent-blue);
+            padding-left: 2rem;
         }
 
         .header-contact {
@@ -205,199 +236,459 @@
         }
 
         .contact-item {
-            display: end;
+            display: flex;
             align-items: end;
             gap: 0.5rem;
             font-size: 0.9rem;
+            color: var(--white-pure);
         }
 
         .contact-item i {
-            color: #7E1C11;
+            color: var(--accent-blue);
         }
 
-        /* Hero Section */
+        /* Hero Section Professional */
         .hero {
-            background: linear-gradient(135deg, #7E1C11, #8B322A);
+            background: var(--primary-black);
             color: white;
             padding: 4rem 2rem;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(44, 44, 44, 0.8));
+            pointer-events: none;
         }
 
         .hero-content {
             max-width: 1200px;
             margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
 
         .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            font-weight: bold;
+            font-size: 3.2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            text-shadow: none;
+            color: var(--white-pure);
+            line-height: 1.2;
+            letter-spacing: 1px;
         }
 
         .hero .availability {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.08);
             display: inline-block;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            margin-bottom: 1rem;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            margin-bottom: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
+            font-size: 1rem;
+            font-weight: 400;
+            letter-spacing: 0.5px;
         }
 
         .cta-button {
-            background: #FFD700;
-            color: #7E1C11;
-            padding: 1rem 2rem;
-            font-size: 1.1rem;
-            font-weight: bold;
-            border: none;
-            border-radius: 5px;
+            background: transparent;
+            color: var(--white-pure);
+            padding: 1.2rem 3rem;
+            font-size: 1rem;
+            font-weight: 500;
+            border: 2px solid var(--white-pure);
+            border-radius: 50px;
             cursor: pointer;
             text-decoration: none;
             display: inline-block;
             margin: 1rem;
             transition: all 0.3s ease;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
         .cta-button:hover {
-            background: #FFC107;
+            background: var(--white-pure);
+            color: var(--primary-black);
             transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(255, 255, 255, 0.2);
         }
 
-        /* Main Content */
+        /* Responsive Hero */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 3rem 1.5rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero .availability {
+                padding: 0.8rem 2rem;
+                font-size: 0.9rem;
+            }
+            
+            .cta-button {
+                padding: 1rem 2.5rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero .availability {
+                padding: 0.7rem 1.5rem;
+                font-size: 0.8rem;
+            }
+            
+            .cta-button {
+                padding: 0.9rem 2rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Hero Slider Panorama Style */
+        .hero-slider {
+            position: relative;
+            height: 70vh;
+            min-height: 500px;
+            max-height: 800px;
+            overflow: hidden;
+            background: var(--light-gray);
+        }
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 100;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .slider-nav:hover {
+            background: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .slider-nav.prev {
+            left: 2rem;
+        }
+
+        .slider-nav.next {
+            right: 2rem;
+        }
+
+        /* Responsive Slider */
+        @media (max-width: 1024px) {
+            .hero-slider {
+                height: 60vh;
+                min-height: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-slider {
+                height: 50vh;
+                min-height: 350px;
+            }
+            
+            .slider-nav {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+            
+            .slider-nav.prev {
+                left: 1rem;
+            }
+            
+            .slider-nav.next {
+                right: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-slider {
+                height: 40vh;
+                min-height: 300px;
+            }
+            
+            .slider-nav {
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
+            }
+            
+            .slider-nav.prev {
+                left: 0.5rem;
+            }
+            
+            .slider-nav.next {
+                right: 0.5rem;
+            }
+        }
+
+        /* Main Content Luxury */
         .main-section {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 3rem 2rem;
+            padding: 4rem 2rem;
+            background: var(--white-pure);
+            border-radius: 0;
+            margin-top: 0;
+            position: relative;
+            z-index: 10;
+            box-shadow: none;
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
         }
 
         .section-header h2 {
             font-size: 2.5rem;
-            color: #7E1C11;
+            color: var(--text-dark);
             margin-bottom: 1rem;
+            text-align: center;
+            text-shadow: none;
+            font-weight: 300;
         }
 
         .section-header h3 {
             font-size: 1.5rem;
-            color: #8B322A;
+            color: var(--text-light);
             font-weight: normal;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
+            text-align: center;
+            margin-bottom: 2rem;
         }
 
-        /* Certifications */
+        .section-header p {
+            text-align: justify;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: var(--text-dark);
+        }
+
+        /* Certifications Luxury */
         .certifications {
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .cert-badge {
-            background: #f8f9fa;
-            padding: 1rem;
-            border-radius: 10px;
-            text-align: center;
-            border: 2px solid #7E1C11;
-        }
-
-        .cert-badge i {
-            font-size: 3rem;
-            color: #7E1C11;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Services Grid */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
+            gap: 3rem;
             margin: 3rem 0;
         }
 
-        .service-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        .cert-badge {
+            background: linear-gradient(135deg, var(--white-pure), var(--gold-light));
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 3px solid var(--gold-luxury);
+            box-shadow: 0 10px 30px var(--shadow-gold);
             transition: transform 0.3s ease;
-            text-decoration: none;
-            color: inherit;
-            display: block;
         }
 
-        .service-card:hover {
-            transform: translateY(-5px);
+        .cert-badge:hover {
+            transform: translateY(-5px) scale(1.05);
         }
 
-        .service-image {
-            height: 200px;
-            background: linear-gradient(135deg, #7E1C11, #8B322A);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 4rem;
-        }
-
-        .service-content {
-            padding: 1.5rem;
-        }
-
-        .service-content h4 {
-            font-size: 1.3rem;
-            color: #7E1C11;
+        .cert-badge i {
+            font-size: 3.5rem;
+            color: var(--burgundy-primary);
             margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        .service-content p {
-            color: #666;
-            line-height: 1.6;
-        }
-
-        /* Secondary Services Grid */
-        .secondary-services-grid {
+        /* Services Grid Luxury */
+        .panorama-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            margin: 4rem 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
 
-        .secondary-service-card {
-            background: #f8f9fa;
-            border-radius: 10px;
+        .panorama-card {
+            position: relative;
+            aspect-ratio: 16/10;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
             text-decoration: none;
             color: inherit;
             display: block;
-            border: 2px solid #000000;
+            transition: transform 0.3s ease;
         }
 
-        .secondary-service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(255, 0, 0, 0.2);
+        .panorama-card:hover {
+            transform: scale(1.02);
+            z-index: 10;
         }
 
-        .secondary-service-image {
-            height: 200px;
-            background: linear-gradient(135deg, #8B322A, #171616);
+        .panorama-image {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .panorama-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.3s ease;
+        }
+
+        .panorama-card:hover .panorama-image img {
+            transform: scale(1.1);
+        }
+
+        .panorama-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+            padding: 2rem 1.5rem 1.5rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .panorama-icon {
+            background: var(--accent-blue);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 4rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            flex-shrink: 0;
         }
 
+        .panorama-overlay h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        /* Responsive Grid */
+        @media (max-width: 1024px) {
+            .panorama-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .panorama-grid {
+                grid-template-columns: 1fr;
+                gap: 1px;
+            }
+            
+            .panorama-card {
+                aspect-ratio: 16/9;
+            }
+            
+            .panorama-overlay {
+                padding: 1.5rem 1rem 1rem 1rem;
+            }
+            
+            .panorama-overlay h3 {
+                font-size: 0.9rem;
+            }
+            
+            .panorama-icon {
+                width: 35px;
+                height: 35px;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .panorama-overlay h3 {
+                font-size: 0.8rem;
+            }
+            
+            .panorama-icon {
+                width: 30px;
+                height: 30px;
+                font-size: 1rem;
+            }
+        }
 
         .map-container {
             max-width: 1200px;
-            margin: 2rem auto;
-            /* opcional: darle un borde o sombra */
+            margin: 3rem auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px var(--shadow-burgundy);
+            border: 3px solid var(--gold-luxury);
         }
 
         .map-container iframe {
@@ -406,29 +697,30 @@
             border: 0;
         }
 
-        @media (max-width: 768px) {
-            .map-container iframe {
-                height: 300px;
-            }
-        }
-
-        /* CTA Section */
+        /* CTA Section Luxury */
         .cta-section {
-            background: #f8f9fa;
-            padding: 3rem 2rem;
+            background: linear-gradient(135deg, var(--gold-light), var(--cream-luxury));
+            padding: 4rem 2rem;
             text-align: center;
+            border-radius: 15px;
+            margin: 3rem 0;
+            border: 2px solid var(--gold-luxury);
         }
 
         .cta-section h3 {
-            font-size: 1.8rem;
-            color: #7E1C11;
-            margin-bottom: 1rem;
+            font-size: 2rem;
+            color: var(--burgundy-primary);
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        /* Testimonials */
+        /* Testimonials Luxury */
         .testimonials {
-            background: white;
-            padding: 3rem 2rem;
+            background: var(--white-pure);
+            padding: 4rem 2rem;
+            border-top: 4px solid var(--gold-luxury);
+            border-bottom: 4px solid var(--gold-luxury);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
         }
 
         .testimonials-content {
@@ -438,92 +730,142 @@
         }
 
         .testimonials h3 {
-            font-size: 2rem;
-            color: #7E1C11;
+            font-size: 2.5rem;
+            color: var(--burgundy-primary);
             margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .testimonials h4 {
-            font-size: 1.2rem;
-            color: #8B322A;
+            font-size: 1.3rem;
+            color: var(--burgundy-light);
             margin-bottom: 2rem;
         }
 
-        /* Why Choose Us */
+        /* Why Choose Us Luxury */
         .why-choose {
-            background: #f8f9fa;
-            padding: 3rem 2rem;
+            background: linear-gradient(135deg, var(--gold-light), var(--cream-luxury));
+            padding: 4rem 2rem;
+            position: relative;
+        }
+
+        .why-choose::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(212, 175, 55, 0.1), transparent);
+            pointer-events: none;
         }
 
         .why-choose-content {
             max-width: 1200px;
             margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
 
         .why-choose h3 {
             text-align: center;
-            font-size: 2rem;
-            color: #7E1C11;
+            font-size: 2.5rem;
+            color: var(--burgundy-primary);
             margin-bottom: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .why-choose-content > p {
+            text-align: justify;
+            max-width: 900px;
+            margin: 0 auto 3rem auto;
+            line-height: 1.7;
+            font-size: 1.1rem;
         }
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
         }
 
         .feature-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
+            background: var(--white-pure);
+            padding: 2.5rem;
+            border-radius: 15px;
             text-align: center;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px var(--shadow-burgundy);
+            border: 2px solid var(--gold-luxury);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px var(--shadow-gold);
         }
 
         .feature-card i {
-            font-size: 3rem;
-            color: #7E1C11;
-            margin-bottom: 1rem;
+            font-size: 3.5rem;
+            color: var(--burgundy-primary);
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .feature-card h4 {
-            font-size: 1.2rem;
-            color: #7E1C11;
+            font-size: 1.3rem;
+            color: var(--burgundy-primary);
             margin-bottom: 1rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
         }
 
         .feature-card p {
-            color: #666;
-            font-size: 0.9rem;
+            color: var(--charcoal);
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
         .logo img {
             max-height: 80px;
-            /* o la altura que quieras */
             width: auto;
             display: block;
             margin: 0;
-            /* centra horizontalmente si hace falta */
+            filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
         }
 
-        /* Number 1 Section */
+        /* Number 1 Section Luxury */
         .number-one {
-            background: linear-gradient(135deg, #7E1C11, #8B322A);
+            background: linear-gradient(135deg, var(--burgundy-primary), var(--burgundy-light));
             color: white;
-            padding: 3rem 2rem;
+            padding: 4rem 2rem;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .number-one::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(212, 175, 55, 0.2), transparent);
+            pointer-events: none;
         }
 
         .number-one h2 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 2rem;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+            position: relative;
+            z-index: 2;
         }
 
-        /* Service Areas */
+        /* Service Areas Luxury */
         .service-areas {
-            background: white;
-            padding: 3rem 2rem;
+            background: var(--white-pure);
+            padding: 4rem 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
         }
 
         .service-areas-content {
@@ -533,21 +875,22 @@
         }
 
         .service-areas h3 {
-            font-size: 2rem;
-            color: #7E1C11;
-            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            color: var(--burgundy-primary);
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .areas-text h4 {
-            font-size: 1.2rem;
-            color: #8B322A;
-            margin: 0.5rem 0;
+            font-size: 1.3rem;
+            color: var(--burgundy-light);
+            margin: 1rem 0;
         }
 
-        /* FAQ Section */
+        /* FAQ Section Luxury */
         .faq-section {
-            background: #f8f9fa;
-            padding: 3rem 2rem;
+            background: rgba(114, 47, 55, 0.05);
+            padding: 4rem 2rem;
         }
 
         .faq-content {
@@ -557,45 +900,65 @@
 
         .faq-content h3 {
             text-align: center;
-            font-size: 2rem;
-            color: #7E1C11;
+            font-size: 2.5rem;
+            color: var(--burgundy-primary);
             margin-bottom: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .faq-item {
-            background: white;
-            margin-bottom: 1rem;
-            border-radius: 10px;
+            background: var(--white-pure);
+            margin-bottom: 1.5rem;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px var(--shadow-burgundy);
+            border: 2px solid var(--gold-luxury);
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px var(--shadow-gold);
         }
 
         .faq-question {
-            background: #7E1C11;
-            color: white;
-            padding: 1rem 1.5rem;
+            background: linear-gradient(135deg, var(--burgundy-primary), var(--burgundy-light));
+            color: rgb(0, 0, 0);
+            padding: 1.5rem 2rem;
             cursor: pointer;
             font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: linear-gradient(135deg, var(--burgundy-light), var(--burgundy-primary));
         }
 
         .faq-question h4 {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
         }
 
         .faq-answer {
-            padding: 1.5rem;
-            color: #666;
+            padding: 2rem;
+            color: var(--charcoal);
             display: none;
+        }
+
+        .faq-answer p {
+            text-align: justify;
+            line-height: 1.8;
+            margin-bottom: 1rem;
         }
 
         .faq-item.active .faq-answer {
             display: block;
         }
 
-        /* Contact Section */
+        /* Contact Section Luxury */
         .contact-section {
-            background: white;
-            padding: 3rem 2rem;
+            background: var(--white-pure);
+            padding: 4rem 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
         }
 
         .contact-content {
@@ -605,179 +968,286 @@
 
         .contact-content h3 {
             text-align: center;
-            font-size: 2rem;
-            color: #7E1C11;
+            font-size: 2.5rem;
+            color: var(--burgundy-primary);
             margin-bottom: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .contact-info {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
             text-align: center;
         }
 
         .contact-card {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 10px;
+            background: linear-gradient(135deg, var(--gold-light), var(--cream-luxury));
+            padding: 2.5rem;
+            border-radius: 15px;
+            border: 2px solid var(--gold-luxury);
+            box-shadow: 0 10px 30px var(--shadow-gold);
+            transition: transform 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
         }
 
         .contact-card h4 {
-            color: #7E1C11;
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
+            color: var(--burgundy-primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
         }
 
         .contact-card p {
-            color: #666;
-            margin-bottom: 0.5rem;
+            text-align: justify;
+            line-height: 1.7;
+            color: var(--charcoal);
+            margin-bottom: 0.8rem;
         }
 
         .contact-card i {
-            color: #7E1C11;
-            margin-right: 0.5rem;
+            color: var(--burgundy-primary);
+            margin-right: 0.8rem;
         }
 
         .service-image {
             width: 100%;
-            height: 150px;
-            /* o la altura fija que necesites */
+            height: 200px;
             overflow: hidden;
-            /* para recortar lo que sobrepase */
+            position: relative;
         }
 
         .service-image img.custom-icon {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            /* llena todo el espacio, recortando si es necesario */
             display: block;
+            transition: transform 0.3s ease;
         }
 
+        .service-card:hover .service-image img.custom-icon {
+            transform: scale(1.1);
+        }
 
-        /* Footer */
+        /* Footer Luxury */
         .footer {
-            background: #7E1C11;
+            background: var(--primary-black);
             color: white;
-            padding: 2rem;
+            padding: 3rem 2rem;
             text-align: center;
+            position: relative;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 60%, rgba(212, 175, 55, 0.1));
+            pointer-events: none;
         }
 
         .footer-content {
             max-width: 1200px;
             margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
 
         .footer-links {
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            margin-bottom: 1rem;
+            gap: 3rem;
+            margin-bottom: 2rem;
             flex-wrap: wrap;
         }
 
         .footer-links h4 {
-            font-size: 1rem;
+            font-size: 1.1rem;
             cursor: pointer;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
         }
 
         .footer-links h4:hover {
-            color: #FFD700;
+            color: var(--gold-luxury);
+            background: rgba(212, 175, 55, 0.1);
+            transform: translateY(-2px);
         }
 
-        /* WhatsApp Float */
+        /* Título Productos con líneas laterales */
+        .productos-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 3rem 0 2rem 0;
+            gap: 2rem;
+        }
+
+        .productos-title-main {
+            font-size: 1.2rem;
+            font-weight: 400;
+            letter-spacing: 3px;
+            color: var(--text-dark);
+            text-transform: uppercase;
+            margin: 0;
+            white-space: nowrap;
+            padding: 0 1rem;
+        }
+
+        .line-left,
+        .line-right {
+            height: 1px;
+            background: var(--border-gray);
+            flex: 1;
+            max-width: 200px;
+        }
+
+        /* Responsive para el título */
+        @media (max-width: 768px) {
+            .productos-header {
+                gap: 1rem;
+                margin: 2rem 0 1.5rem 0;
+            }
+            
+            .productos-title-main {
+                font-size: 1rem;
+                letter-spacing: 2px;
+                padding: 0 0.5rem;
+            }
+            
+            .line-left,
+            .line-right {
+                max-width: 100px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .productos-header {
+                gap: 0.5rem;
+            }
+            
+            .productos-title-main {
+                font-size: 0.9rem;
+                letter-spacing: 1px;
+            }
+            
+            .line-left,
+            .line-right {
+                max-width: 60px;
+            }
+        }
+
+        /* WhatsApp Float Luxury */
         .whatsapp-float {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #25D366;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
             color: white;
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.8rem;
+            font-size: 2rem;
             text-decoration: none;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
             z-index: 1000;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
+            border: 3px solid var(--accent-blue);
         }
 
         .whatsapp-float:hover {
-            transform: scale(1.1);
+            transform: scale(1.15) rotate(10deg);
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.6);
         }
 
-        /* 1) Botón hamburguesa: oculto en desktop */
+        /* Menu Toggle Luxury */
         .menu-toggle {
             display: none;
             background: none;
             border: none;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             cursor: pointer;
-            color: var(--color-primary);
+            color: #ffffff;
+            transition: all 0.3s ease;
+            padding: 8px;
         }
 
-        /* 2) Estilos responsive para pantallas ≤768px */
-        @media (max-width: 768px) {
+        .menu-toggle:hover {
+            color: var(--accent-blue);
+            transform: scale(1.1);
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
 
-            /* Header: columna en móvil */
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .section-header p,
+            .service-content p,
+            .faq-answer p,
+            .why-choose-content > p {
+                text-align: justify;
+                text-justify: inter-word;
+            }
+
             .header-content {
                 flex-direction: column;
                 gap: 1rem;
             }
 
-            /* Mostrar el botón hamburguesa */
             .menu-toggle {
                 display: block;
             }
 
-            /* Nav oculta por defecto y en columna */
             .nav-menu {
                 display: none;
                 flex-direction: column;
                 gap: 1rem;
                 width: 100%;
+                background: rgba(0, 0, 0, 0.98);
+                padding: 1rem;
+                border-radius: 10px;
+                margin-top: 1rem;
             }
 
-            /* Cuando <header> tenga .open, mostramos el nav */
             .header.open .nav-menu {
                 display: flex;
             }
 
-            /* Cada item ocupa todo el ancho */
             .nav-item {
                 width: 100%;
                 text-align: center;
             }
 
-            /* Dropdown móvil: oculto por defecto */
             .dropdown {
                 position: static;
                 display: none;
                 margin-top: 0.5rem;
                 opacity: 1;
-                /* ya visible (pero con display:none) */
                 visibility: visible;
                 transform: none;
             }
 
-            /* Abre el submenú cuando .nav-item tenga .open */
             .nav-item.open .dropdown {
                 display: block;
             }
 
-            /* Otros ajustes responsive */
             .header-contact {
                 align-items: center;
                 text-align: center;
             }
 
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
 
             .services-grid,
@@ -790,6 +1260,20 @@
                 flex-direction: column;
                 gap: 1rem;
             }
+
+            .certifications {
+                flex-direction: column;
+                align-items: center;
+                gap: 2rem;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+
+            .map-container iframe {
+                height: 300px;
+            }
         }
     </style>
 </head>
@@ -798,8 +1282,8 @@
     <!-- Header -->
     <header class="header">
         <div class="header-content">
-            <a href="../index.html" class="logo">
-                <img src="logo.jpg" alt="CortiLujos Logo">
+            <a href="/index.html" class="logo">
+                <img src="/logo_negro.png" alt="CortiLujos Logo">
             </a>
 
 
@@ -810,54 +1294,91 @@
 
             <!-- Navigation Menu -->
             <nav class="nav-menu">
-                <div class="nav-item">
-                    <a href="#" class="nav-link">
-                        Inicio
-                    </a>
-                </div>
 
                 <div class="nav-item">
                     <a href="#" class="nav-link">
                         Cortinas <i class="fas fa-chevron-down"></i>
                     </a>
                     <div class="dropdown">
-                        <a href="services/cortinas-romanas.html" class="dropdown-item">Cortinas Romanas</a>
-                        <a href="services/enrollable-blackout.html" class="dropdown-item">Enrollable Black Out</a>
-                        <a href="services/enrollable-screen.html" class="dropdown-item">Enrollable Screen</a>
-                        <a href="services/onda-serena.html" class="dropdown-item">Onda Serena</a>
-                        <a href="services/panel-japones.html" class="dropdown-item">Panel Japonés</a>
-                        <a href="services/sheer-elegance.html" class="dropdown-item">Sheer Elegance</a>
+                        <a href="enrollable-blackout.html" class="dropdown-item">Enrollable Black Out</a>
+                        <a href="enrollable-screen.html" class="dropdown-item">Enrollable Screen</a>
+                        <a href="panel-japones.html" class="dropdown-item">Panel Japonés</a>
+                        <a href="sheer-elegance.html" class="dropdown-item">Sheer Elegance</a>
+                        <a href="cortinas-romanas.html" class="dropdown-item">Cortinas Romanas</a>
+                        <a href="onda-serena.html" class="dropdown-item">Onda Serena</a>
+                        
                     </div>
                 </div>
 
                 <div class="nav-item">
-                    <a href="categories/persianas.html" class="nav-link">
+                    <a href="/persianas/index.html" class="nav-link">
                         Persianas <i class="fas fa-chevron-down"></i>
                     </a>
                     <div class="dropdown">
-                        <a href="categories/persianas/persianas-aluminio.html" class="dropdown-item">Persianas de
-                            Aluminio</a>
-                        <a href="categories/persianas/persianas-micromadera.html" class="dropdown-item">Persianas
-                            Micromadera</a>
-                        <a href="categories/persianas/persiana-vertical.html" class="dropdown-item">Persianas
+                        <a href="/persianas/persiana-vertical.html" class="dropdown-item">Persianas
                             Verticales</a>
+                        <a href="/persianas/persianas-aluminio.html" class="dropdown-item">Persianas de
+                            Aluminio</a>
+                        <a href="/persianas/persianas-micromadera.html" class="dropdown-item">Persianas
+                            Macromadera</a>
                     </div>
                 </div>
 
                 <div class="nav-item">
-                    <a href="categories/papel-de-colgadura.html" class="nav-link">
+                    <a href="/categories/papel-de-colgadura.html" class="nav-link">
                         Papel de Colgadura
                     </a>
                 </div>
 
                 <div class="nav-item">
-                    <a href="categories/polarizado-de-ventanas.html" class="nav-link">
+                    <a href="/categories/polarizado-de-ventanas.html" class="nav-link">
                         Polarizado
                     </a>
                 </div>
+
+                <div class="nav-item">
+                    <a href="/categories/puertas-blindadas.html" class="nav-link">
+                        Puertas Blindadas
+                    </a>
+                </div>
+
+                <div class="nav-item">
+                    <a href="/categories/cerraduras-de-seguridad.html" class="nav-link">
+                        Cerradura Seguridad
+                    </a>
+                </div>
+
+                <div class="nav-item">
+                    <a href="/categories/camaras-de-seguridad.html" class="nav-link">
+                        Camaras Seguridad
+                    </a>
+                </div>
+
+                
             </nav>
         </div>
     </header>
+
+    <!-- Hero Slider Section -->
+    <section class="hero-slider">
+        <div class="slider-container">
+            <div class="slide active">
+                <img src="cortinas_fondo.jpg" alt="Slide 1">
+            </div>
+            
+            <div class="slide">
+                <img src="cortinas_fondo2.jpg" alt="Slide 2">
+            </div>
+            
+            <div class="slide">
+                <img src="cortinas_fondo23.jpg" alt="Slide 3">
+            </div>
+        </div>
+        
+        <!-- Navigation arrows -->
+        <button class="slider-nav prev" onclick="changeSlide(-1)">‹</button>
+        <button class="slider-nav next" onclick="changeSlide(1)">›</button>
+    </section>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -876,7 +1397,7 @@
     <section class="main-section">
         <div class="section-header">
             <h2>Nuestro Servicio Experto de Cortinas en Barranquilla</h2>
-            <h3>TRABAJO SEGURO. TRABAJO LIMPIO. SIEMPRE.</h3>
+            <h3>TRABAJO SEGURO. TRABAJO LIMPIO. SIEMPRE.</h3> <br>
             <p>Ya sea que necesites cortinas romanas, enrollables blackout, panel japonés o sheer elegance, estamos
                 licenciados, asegurados y calificados para brindarte un servicio rápido y profesional a un precio
                 razonable. Especializados en todo tipo de cortinas para transformar tus espacios.</p>
@@ -894,116 +1415,145 @@
             </div>
         </div>
 
+
+        <!-- Título Productos con líneas -->
+        <div class="productos-header">
+            <div class="line-left"></div>
+            <h2 class="productos-title-main">CORTINAS</h2>
+            <div class="line-right"></div>
+        </div>
+
         <!-- Services Grid -->
-        <div class="services-grid">
-            <a href="services/cortinas-romanas.html" class="service-card">
-                <div class="service-image">
-                    <img src="/Cortina Romana/2.jpeg" alt="Enrollable Blackout" class="custom-icon">
+        <div class="panorama-grid">
+            <a href="cortinas-romanas.html" class="panorama-card">
+                <div class="panorama-image">
+                    <img src="/Cortina Romana/2.jpeg" alt="Cortinas Romanas">
                 </div>
-                <div class="service-content">
-                    <h4>Cortinas Romanas</h4>
-                    <p>Elegantes cortinas romanas que combinan funcionalidad y estilo clásico para cualquier ambiente de
-                        tu hogar.</p>
-                </div>
-            </a>
-
-            <a href="/services/enrollable-blackout.html" class="service-card">
-                <div class="service-image">
-                    <img src="/Enrollable en Black Out/4.jpeg" alt="Enrollable Blackout" class="custom-icon">
-                </div>
-                <div class="service-content">
-                    <h4>Enrollable Black Out</h4>
-                    <p>Cortinas enrollables que bloquean completamente la luz, perfectas para dormitorios y salas de
-                        cine.</p>
+                <div class="panorama-overlay">
+                    <div class="panorama-icon">+</div>
+                    <h3>CORTINAS ROMANAS</h3>
                 </div>
             </a>
 
-            <a href="/services/enrollable-screen.html" class="service-card">
-                <div class="service-image">
-                    <img src="/Enrollable/5.jpeg" alt="enrollable-screen" class="custom-icon">
+            <a href="enrollable-blackout.html" class="panorama-card">
+                <div class="panorama-image">
+                    <img src="/Enrollable en Black Out/4.jpeg" alt="Enrollable Blackout">
                 </div>
-                <div class="service-content">
-                    <h4>Enrollable Screen</h4>
-                    <p>Cortinas enrollables que filtran la luz natural manteniendo la privacidad y protegiendo del
-                        calor.</p>
-                </div>
-            </a>
-
-            <a href="/services/onda-serena.html" class="service-card">
-                <div class="service-image">
-                    <img src="/Onda Serena/4.jpeg" alt="onda-serena" class="custom-icon">
-                </div>
-                <div class="service-content">
-                    <h4>Onda Serena</h4>
-                    <p>Cortinas con elegantes ondas que crean un ambiente sofisticado y moderno en cualquier espacio.
-                    </p>
+                <div class="panorama-overlay">
+                    <div class="panorama-icon">+</div>
+                    <h3>ENROLLABLE BLACKOUT</h3>
                 </div>
             </a>
 
-            <a href="/services/panel-japones.html" class="service-card">
-                <div class="service-image">
-                    <img src="/Panel Japones/5.jpeg" alt="panel-japones" class="custom-icon">
+            <a href="enrollable-screen.html" class="panorama-card">
+                <div class="panorama-image">
+                    <img src="/Enrollable/5.jpeg" alt="Enrollable Screen">
                 </div>
-                <div class="service-content">
-                    <h4>Panel Japonés</h4>
-                    <p>Paneles japoneses minimalistas que aportan elegancia y funcionalidad a espacios modernos.</p>
-                </div>
-            </a>
-
-            <a href="/services/sheer-elegance.html" class="service-card">
-                <div class="service-image">
-                    <img src="/Sheer/4.jpeg" alt="sheer-elegance" class="custom-icon">
-                </div>
-                <div class="service-content">
-                    <h4>Sheer Elegance</h4>
-                    <p>Cortinas sheer que combinan transparencia y privacidad con un toque de elegancia único.</p>
+                <div class="panorama-overlay">
+                    <div class="panorama-icon">+</div>
+                    <h3>ENROLLABLE SCREEN</h3>
                 </div>
             </a>
 
+            <a href="onda-serena.html" class="panorama-card">
+                <div class="panorama-image">
+                    <img src="/Onda Serena/4.jpeg" alt="Onda Serena">
+                </div>
+                <div class="panorama-overlay">
+                    <div class="panorama-icon">+</div>
+                    <h3>ONDA SERENA</h3>
+                </div>
+            </a>
+
+            <a href="panel-japones.html" class="panorama-card">
+                <div class="panorama-image">
+                    <img src="/Panel Japones/5.jpeg" alt="Panel Japonés">
+                </div>
+                <div class="panorama-overlay">
+                    <div class="panorama-icon">+</div>
+                    <h3>PANEL JAPONÉS</h3>
+                </div>
+            </a>
+
+            <a href="sheer-elegance.html" class="panorama-card">
+                <div class="panorama-image">
+                    <img src="/Sheer/4.jpeg" alt="Sheer Elegance">
+                </div>
+                <div class="panorama-overlay">
+                    <div class="panorama-icon">+</div>
+                    <h3>SHEER ELEGANCE</h3>
+                </div>
+            </a>
         </div>
 
         <br><br>
-        <h2>PERSIANAS, PAPEL DE COLGADURA Y POLARIZADO DE VENTANAS</h2>
 
-        <div class="secondary-services-grid">
-            <a href="categories/persianas.html" class="secondary-service-card">
-                <div class="service-image">
-                    <img src="/Persiana Vertical/4.jpeg" alt="persiana-vertical" class="custom-icon">
-                </div>
-                <div class="service-content">
-                    <h4>Persianas</h4>
-                    <p>Persianas duraderas de aluminio, ideales para oficinas y espacios que requieren control total de
-                        luz.</p>
-                </div>
-            </a>
-
-            <a href="categories/papel-de-colgadura.html" class="secondary-service-card">
-                <div class="service-image">
-                    <img src="/Papel Colgadura/5.jpeg" alt="papel-de-colgadura" class="custom-icon">
-                </div>
-                <div class="service-content">
-                    <h4>Papel de Colgadura</h4>
-                    <p>Persianas con acabado en madera que brindan calidez y elegancia natural a cualquier ambiente.</p>
-                </div>
-            </a>
-
-            <a href="categories/polarizado-de-ventanas.html" class="secondary-service-card">
-                <div class="service-image">
-                    <img src="/Polarizado/4.jpeg" alt="polarizado-de-ventanas" class="custom-icon">
-                </div>
-                <div class="service-content">
-                    <h4>Polarizado de Ventanas</h4>
-                    <p>Persianas verticales perfectas para ventanas grandes y oficinas, con control preciso de luz y
-                        privacidad.</p>
-                </div>
-            </a>
-
+        <!-- Título Productos con líneas -->
+        <div class="productos-header">
+            <div class="line-left"></div>
+            <h2 class="productos-title-main">PRODUCTOS</h2>
+            <div class="line-right"></div>
         </div>
 
-        <div class="cta-section">
-            <h3>Disponibles Todos los Días</h3>
-            <a href="https://wa.me/573003903535" class="cta-button">
-                ¿Quieres una Consulta Gratis de CortiLujos?
+        <div class="panorama-grid">
+            <a href="persianas/index.html" class="panorama-card">
+                <div class="panorama-image">
+                    <img src="/Persiana Vertical/4.jpeg" alt="Persianas">
+                </div>
+                <div class="panorama-overlay">
+                    <div class="panorama-icon">+</div>
+                    <h3>PERSIANAS</h3>
+                </div>
+            </a>
+
+            <a href="/categories/papel-de-colgadura.html" class="panorama-card">
+                <div class="panorama-image">
+                    <img src="/Papel Colgadura/5.jpeg" alt="Papel de Colgadura">
+                </div>
+                <div class="panorama-overlay">
+                    <div class="panorama-icon">+</div>
+                    <h3>PAPEL DE COLGADURA</h3>
+                </div>
+            </a>
+
+            <a href="/categories/polarizado-de-ventanas.html" class="panorama-card">
+                <div class="panorama-image">
+                    <img src="/Polarizado/4.jpeg" alt="Polarizado de Ventanas">
+                </div>
+                <div class="panorama-overlay">
+                    <div class="panorama-icon">+</div>
+                    <h3>POLARIZADO DE VENTANAS</h3>
+                </div>
+            </a>
+
+            <a href="/categories/puertas-blindadas.html" class="panorama-card">
+                <div class="panorama-image">
+                    <img src="/Puertas Blindadas/3.jpeg" alt="Puertas Blindadas">
+                </div>
+                <div class="panorama-overlay">
+                    <div class="panorama-icon">+</div>
+                    <h3>PUERTAS BLINDADAS</h3>
+                </div>
+            </a>
+
+            <a href="/categories/camaras-de-seguridad.html" class="panorama-card">
+                <div class="panorama-image">
+                    <img src="/Camaras de seguridad/5.jpeg" alt="Cámaras de Seguridad">
+                </div>
+                <div class="panorama-overlay">
+                    <div class="panorama-icon">+</div>
+                    <h3>CÁMARAS DE SEGURIDAD</h3>
+                </div>
+            </a>
+
+            <a href="/categories/cerraduras-de-seguridad.html" class="panorama-card">
+                <div class="panorama-image">
+                    <img src="/Cerraduras de seguridad/3.jpeg" alt="Cerraduras de Seguridad">
+                </div>
+                <div class="panorama-overlay">
+                    <div class="panorama-icon">+</div>
+                    <h3>CERRADURAS DE SEGURIDAD</h3>
+                </div>
             </a>
         </div>
     </section>
@@ -1076,7 +1626,7 @@
                 </div>
                 <div class="faq-answer">
                     <p>Ofrecemos instalación de cortinas romanas, enrollables blackout, enrollables screen, onda serena,
-                        panel japonés, sheer elegance, y también servicios de persianas y papel de colgadura.</p>
+                        panel japonés, sheer elegance, y también servicios de persianas, papel de colgadura, puertas blindadas, camaras de seguridad, polarizado de ventanas y cerraduras de seguridad.</p>
                 </div>
             </div>
 
@@ -1269,6 +1819,34 @@
                 header.classList.toggle('open');
             });
         });
+    </script>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+        }
+
+        function changeSlide(direction) {
+            currentSlide += direction;
+            
+            if (currentSlide >= totalSlides) {
+                currentSlide = 0;
+            } else if (currentSlide < 0) {
+                currentSlide = totalSlides - 1;
+            }
+            
+            showSlide(currentSlide);
+        }
+
+        // Auto-slide every 5 seconds
+        setInterval(() => {
+            changeSlide(1);
+        }, 5000);
     </script>
 
 
