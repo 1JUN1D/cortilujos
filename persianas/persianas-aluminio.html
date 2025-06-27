@@ -8,21 +8,25 @@
     <meta name="description"
         content="Servicio profesional de persianas de aluminio en Barranquilla. Instalación experta, materiales de calidad y diseños elegantes.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" href="/logo_negro_corto.png" type="image/x-icon">
     <style>
         /* Cortinas Romanas - CortiLujos Luxury Styles */
 
         /* Variables CSS de Lujo */
         :root {
-            --burgundy-primary: #722F37;
-            --burgundy-dark: #5A252A;
-            --burgundy-light: #8B3A42;
-            --gold-luxury: #D4AF37;
-            --gold-light: #F4E4BC;
-            --cream-luxury: #F8F6F0;
-            --charcoal: #2C2C2C;
+            --primary-dark: #1a1a1a;
+            --primary-black: #000000;
+            --secondary-dark: #2c2c2c;
+            --accent-gray: #6c757d;
+            --light-gray: #f8f9fa;
+            --medium-gray: #e9ecef;
+            --border-gray: #dee2e6;
             --white-pure: #FFFFFF;
-            --shadow-gold: rgba(212, 175, 55, 0.3);
-            --shadow-burgundy: rgba(114, 47, 55, 0.2);
+            --text-dark: #212529;
+            --text-light: #6c757d;
+            --shadow-dark: rgba(0, 0, 0, 0.15);
+            --shadow-light: rgba(0, 0, 0, 0.08);
+            --accent-blue: #007bff;
         }
 
         * {
@@ -34,21 +38,12 @@
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            color: var(--charcoal);
-            background: linear-gradient(135deg, var(--cream-luxury), var(--gold-light));
+            color: var(--text-dark);
+            background: var(--white-pure);
             min-height: 100vh;
         }
 
         /* Header Luxury */
-        .header {
-            background: rgba(114, 47, 55, 0.95);
-            backdrop-filter: blur(15px);
-            box-shadow: 0 8px 32px rgba(114, 47, 55, 0.2);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 2px solid var(--gold-luxury);
-        }
 
         .header-content {
             max-width: 1200px;
@@ -59,18 +54,28 @@
             align-items: center;
         }
 
+        .header {
+            background: var(--primary-black);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 4px 20px var(--shadow-dark);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-gray);
+        }
+
         .logo {
             font-size: 2rem;
             font-weight: bold;
-            color: var(--gold-luxury);
+            color: var(--white-pure);
             text-decoration: none;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            text-shadow: none;
             transition: all 0.3s ease;
         }
 
         .logo:hover {
             transform: scale(1.05);
-            color: var(--gold-light);
+            color: var(--accent-blue);
         }
 
         .logo img {
@@ -110,8 +115,8 @@
         }
 
         .nav-link:hover {
-            color: var(--gold-luxury);
-            background: rgba(212, 175, 55, 0.1);
+            color: var(--accent-blue);
+            background: rgba(255, 255, 255, 0.1);
             transform: translateY(-2px);
         }
 
@@ -124,7 +129,8 @@
             position: absolute;
             top: 100%;
             left: 0;
-            background: linear-gradient(135deg, var(--burgundy-primary), var(--burgundy-light));
+            background: var(--secondary-dark);
+            border: 1px solid var(--border-gray);   
             min-width: 250px;
             border-radius: 12px;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
@@ -133,7 +139,6 @@
             transform: translateY(-15px);
             transition: all 0.4s ease;
             z-index: 1000;
-            border: 1px solid var(--gold-luxury);
         }
 
         .nav-item:hover .dropdown {
@@ -161,8 +166,8 @@
         }
 
         .dropdown-item:hover {
-            background: rgba(212, 175, 55, 0.2);
-            color: var(--gold-luxury);
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--accent-blue);
             padding-left: 2rem;
         }
 
@@ -183,21 +188,15 @@
         }
 
         .contact-item:hover {
-            color: var(--gold-luxury);
+            color: var(--accent-blue);
             transform: translateX(-2px);
         }
 
         .contact-item i {
-            color: var(--gold-luxury);
+            color: var(--accent-blue);
         }
 
         /* Breadcrumb Luxury */
-        .breadcrumb {
-            background: linear-gradient(135deg, var(--gold-light), var(--cream-luxury));
-            padding: 1.5rem 0;
-            border-bottom: 2px solid var(--gold-luxury);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        }
 
         .breadcrumb-content {
             max-width: 1200px;
@@ -206,26 +205,69 @@
             font-weight: 500;
         }
 
+        .breadcrumb {
+            background: var(--light-gray);
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--border-gray);
+            box-shadow: 0 2px 10px var(--shadow-light);
+        }
+
         .breadcrumb a {
-            color: var(--burgundy-primary);
-            text-decoration: none;
-            margin-right: 0.5rem;
-            transition: all 0.3s ease;
-            padding: 0.2rem 0.5rem;
-            border-radius: 3px;
+            color: var(--text-dark);
+            /* resto del código */
         }
 
         .breadcrumb a:hover {
-            background: rgba(114, 47, 55, 0.1);
-            color: var(--burgundy-dark);
+            background: rgba(0, 123, 255, 0.1);
+            color: var(--accent-blue);
             text-decoration: underline;
+        }
+
+        /* Hero Slider Single Image */
+        .hero-slider {
+            position: relative;
+            height: 70vh;
+            min-height: 500px;
+            max-height: 800px;
+            overflow: hidden;
+            background: var(--light-gray);
+        }
+
+        .hero-slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        /* Responsive Hero Slider */
+        @media (max-width: 1024px) {
+            .hero-slider {
+                height: 60vh;
+                min-height: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-slider {
+                height: 50vh;
+                min-height: 350px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-slider {
+                height: 40vh;
+                min-height: 300px;
+            }
         }
 
         /* Hero Section Luxury */
         .service-hero {
-            background: linear-gradient(135deg, var(--burgundy-primary), var(--burgundy-light));
+            background: var(--primary-black);
             color: white;
-            padding: 5rem 2rem;
+            padding: 4rem 2rem;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -238,19 +280,18 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(45deg, transparent 60%, rgba(212, 175, 55, 0.1));
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(44, 44, 44, 0.8));
             pointer-events: none;
         }
 
         .service-hero h1 {
-            font-size: 3.5rem;
+            font-size: 3.2rem;
             margin-bottom: 1.5rem;
-            font-weight: bold;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
-            background: linear-gradient(45deg, white, var(--gold-luxury));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-weight: 300;
+            text-shadow: none;
+            color: var(--white-pure);
+            line-height: 1.2;
+            letter-spacing: 1px;
             position: relative;
             z-index: 2;
         }
@@ -259,36 +300,38 @@
             font-size: 1.3rem;
             max-width: 900px;
             margin: 0 auto;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            text-shadow: none;
             position: relative;
             z-index: 2;
             line-height: 1.8;
         }
 
         /* Main Content Luxury */
-        .main-content {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-            background: var(--white-pure);
-            border-radius: 20px 20px 0 0;
-            margin-top: -20px;
-            position: relative;
-            z-index: 10;
-            box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
-        }
 
         .content-section {
             margin-bottom: 4rem;
         }
 
+        .main-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            background: var(--white-pure);
+            border-radius: 0;
+            margin-top: 0;
+            position: relative;
+            z-index: 10;
+            box-shadow: none;
+        }
+
         .content-section h2 {
             font-size: 2.5rem;
-            color: var(--burgundy-primary);
+            color: var(--text-dark);
             margin-bottom: 2rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            text-shadow: none;
             position: relative;
             padding-bottom: 1rem;
+            font-weight: 300;
         }
 
         .content-section h2::after {
@@ -298,7 +341,7 @@
             left: 0;
             width: 60px;
             height: 3px;
-            background: linear-gradient(135deg, var(--gold-luxury), var(--gold-light));
+            background: var(--accent-blue);
             border-radius: 2px;
         }
 
@@ -306,20 +349,18 @@
             font-size: 1.1rem;
             line-height: 1.8;
             margin-bottom: 1.5rem;
-            color: var(--charcoal);
+            color: var(--text-dark);
             text-align: justify;
         }
 
         .content-section ul {
             padding-left: 2rem;
             margin: 2rem 0;
-            color: var(--charcoal);
+            color: var(--text-dark);
         }
 
-        .content-section li {
-            margin-bottom: 0.8rem;
-            line-height: 1.6;
-            position: relative;
+        .content-section li::marker {
+            color: var(--accent-blue);
         }
 
         .content-section li::marker {
@@ -329,14 +370,14 @@
         /* Gallery Carousel Luxury */
         .gallery-carousel-container {
             position: relative;
-            width: 350px;
-            height: 500px;
+            width: 500px;
+            height: 600px;
             margin: 3rem auto;
             overflow: hidden;
-            border-radius: 20px;
-            background: var(--cream-luxury);
-            box-shadow: 0 15px 40px var(--shadow-burgundy);
-            border: 3px solid var(--gold-luxury);
+            border-radius: 15px;
+            background: var(--light-gray);
+            box-shadow: 0 10px 30px var(--shadow-dark);
+            border: 2px solid var(--border-gray);
         }
 
         .gallery-carousel {
@@ -351,7 +392,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: var(--cream-luxury);
+            background: var(--light-gray);
         }
 
         .gallery-carousel-item img {
@@ -372,26 +413,32 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background: linear-gradient(135deg, var(--burgundy-primary), var(--burgundy-light));
-            color: white;
-            border: 2px solid var(--gold-luxury);
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--text-dark);
+            border: none;
             width: 50px;
             height: 50px;
             border-radius: 50%;
             cursor: pointer;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             z-index: 10;
             transition: all 0.3s ease;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 5px 15px var(--shadow-burgundy);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(10px);
         }
 
         .gallery-controls:hover {
-            background: linear-gradient(135deg, var(--burgundy-light), var(--burgundy-primary));
+            background: var(--white-pure);
+            color: var(--accent-blue);
             transform: translateY(-50%) scale(1.1);
-            box-shadow: 0 8px 25px var(--shadow-gold);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .gallery-controls:active {
+            transform: translateY(-50%) scale(0.95);
         }
 
         .gallery-prev {
@@ -416,34 +463,36 @@
             width: 12px;
             height: 12px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.6);
             cursor: pointer;
             transition: all 0.3s ease;
-            border: 2px solid var(--gold-luxury);
+            border: 2px solid rgba(255, 255, 255, 0.8);
         }
 
         .gallery-dot:hover {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.9);
             transform: scale(1.1);
+            border-color: var(--white-pure);
         }
 
         .gallery-dot.active {
-            background: var(--gold-luxury);
+            background: var(--accent-blue);
+            border-color: var(--accent-blue);
             transform: scale(1.3);
-            box-shadow: 0 0 10px var(--shadow-gold);
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
         }
 
         .gallery-photo-count {
             text-align: center;
             margin-top: 1.5rem;
-            font-size: 1.1rem;
-            color: var(--burgundy-primary);
-            font-weight: 600;
-            background: var(--gold-light);
+            font-size: 1rem;
+            color: var(--text-light);
+            font-weight: 500;
+            background: var(--light-gray);
             padding: 0.8rem 1.5rem;
             border-radius: 25px;
             display: inline-block;
-            border: 2px solid var(--gold-luxury);
+            border: 1px solid var(--border-gray);
         }
 
         /* CTA Section Luxury */
@@ -452,12 +501,13 @@
             flex-direction: column;
             align-items: center;
             padding: 4rem 2rem;
-            background: linear-gradient(135deg, var(--burgundy-primary), var(--burgundy-light));
+            background: var(--primary-black);
             color: white;
             margin: 4rem 0;
-            border-radius: 20px;
+            border-radius: 12px;
             position: relative;
             overflow: hidden;
+            box-shadow: 0 10px 40px var(--shadow-dark);
         }
 
         .cta-section::before {
@@ -467,48 +517,83 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at center, rgba(212, 175, 55, 0.2), transparent);
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(44, 44, 44, 0.8));
             pointer-events: none;
         }
 
         .cta-section h3 {
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
             font-size: 2.5rem;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+            font-weight: 300;
+            text-shadow: none;
             position: relative;
             z-index: 2;
+            text-align: center;
+            line-height: 1.2;
+            letter-spacing: 1px;
         }
 
         .cta-button {
-            background: linear-gradient(135deg, var(--gold-luxury), var(--gold-light));
-            color: var(--burgundy-primary);
-            padding: 1.2rem 2.5rem;
-            font-size: 1.2rem;
-            font-weight: bold;
-            border: 2px solid var(--gold-luxury);
-            border-radius: 8px;
+            background: transparent;
+            color: var(--white-pure);
+            padding: 1.3rem 3rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border: 2px solid var(--white-pure);
+            border-radius: 50px;
             text-decoration: none;
             cursor: pointer;
             display: block;
             width: 100%;
-            max-width: 350px;
+            max-width: 400px;
             text-align: center;
-            transition: all 0.4s ease;
-            box-shadow: 0 8px 25px var(--shadow-gold);
+            transition: all 0.3s ease;
             position: relative;
             z-index: 2;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
 
         .cta-button:hover {
-            background: linear-gradient(135deg, var(--gold-light), var(--gold-luxury));
+            background: var(--white-pure);
+            color: var(--primary-black);
             transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(212, 175, 55, 0.4);
+            box-shadow: 0 12px 35px rgba(255, 255, 255, 0.2);
+        }
+
+        /* CTA Responsive */
+        @media (max-width: 768px) {
+            .cta-section {
+                padding: 3rem 1.5rem;
+                margin: 3rem 0;
+            }
+            
+            .cta-section h3 {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+            
+            .cta-button {
+                padding: 1.1rem 2.5rem;
+                font-size: 1rem;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cta-section h3 {
+                font-size: 1.8rem;
+            }
+            
+            .cta-button {
+                padding: 1rem 2rem;
+                font-size: 0.9rem;
+            }
         }
 
         /* Footer Luxury */
         .footer {
-            background: linear-gradient(135deg, var(--burgundy-primary), var(--burgundy-dark));
-            color: white;
+            background: var(--primary-black);            color: white;
             padding: 3rem 2rem;
             text-align: center;
             position: relative;
@@ -572,7 +657,7 @@
             box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
             transition: all 0.3s ease;
             z-index: 1000;
-            border: 3px solid var(--gold-luxury);
+            border: 3px solid var(--accent-blue);
         }
 
         .whatsapp-float:hover {
@@ -612,8 +697,8 @@
 
             .gallery-carousel-container {
                 width: 100%;
-                max-width: 300px;
-                height: 400px;
+                max-width: 450px;
+                height: 550px;
             }
 
             .cta-button {
@@ -680,7 +765,7 @@
     <header class="header">
         <div class="header-content">
             <a href="/index.html" class="logo">
-                <img src="/logo.jpg" alt="CortiLujos Logo">
+                <img src="/logo_negro.png" alt="CortiLujos Logo">
             </a>
             <div class="header-contact">
                 <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>Carrera 44 #70-88,
@@ -698,6 +783,11 @@
             <span>Persianas de Aluminio</span>
         </div>
     </div>
+
+    <!-- Hero Slider Section -->
+    <section class="hero-slider">
+        <img src="/Persianas Aluminio/4.jpeg" alt="Persianas de Aluminio - CortiLujos Barranquilla">
+    </section>
 
     <!-- Hero Section -->
     <section class="service-hero">
